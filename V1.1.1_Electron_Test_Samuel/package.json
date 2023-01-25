@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "@electron/remote": "^2.0.9"
-  }
-}

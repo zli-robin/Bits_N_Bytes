@@ -35,6 +35,11 @@
       width: 150px;
       height: 100px;
     }
+    .drgTop {
+      background-color: black;
+      -webkit-app-region: drag;
+      height: 30px;
+    }
     #widgetcontainer {
       position:fixed;
       margin: 0;
