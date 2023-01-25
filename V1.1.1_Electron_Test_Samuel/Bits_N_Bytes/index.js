@@ -1,5 +1,4 @@
 const { app, BrowserWindow } = require('electron');
-const { ipcMain } = require('electron');
 const path = require('path');
 
 
@@ -15,18 +14,18 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1280,
-    height: 720,
+    width: 1900,
+    height: 1000,
+    //skipTaskbar: false,
     frame: false,
     //fullscreen: true,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true,
+      preload: path.join(__dirname, 'preload.js')
     },
   });
-
+  mainWindow.setAutoHideMenuBar(false);
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, './html/index.html'));
+  mainWindow.loadFile(path.join(__dirname, './src/html/index.html'));
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools();
@@ -56,12 +55,3 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
-ipcMain.on('minimize', () => {
-  mainWindow.minimize();
-});
-ipcMain.on('fullscreen', (e, toggle) => {
-  mainWindow.setFullScreen(toggle);
-});
-ipcMain.on('close', () => {
-  mainWindow.close();
-});
