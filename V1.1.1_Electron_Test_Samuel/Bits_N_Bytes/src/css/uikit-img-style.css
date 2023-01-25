@@ -1,0 +1,29 @@
+img.slide-good{
+    height: 50%;
+    width: 100%;
+    overflow:hidden;
+}
+
+.navBarColor {
+    background: rgb(192,72,72) !important;
+    background: linear-gradient(90deg, rgba(192,72,72,1) 0%, rgba(72,0,72,1) 59%, rgba(23,0,23,1) 100%) !important;
+}
+
+a.navBarText{
+    color: rgb(255, 255, 255);
+    size: 10em;
+}
+
+html {
+    background: rgb(192,72,72) !important;
+    background: linear-gradient(90deg, rgba(192,72,72,1) 0%, rgba(72,0,72,1) 59%, rgba(23,0,23,1) 100%) !important;  
+}
+
+.songbutton {
+    color: white;
+    background-color: rgba(240, 248, 255, 0);
+    border: solid rgba(192, 72, 72, 0);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
