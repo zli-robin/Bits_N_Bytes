@@ -21,6 +21,7 @@
         </p>
         <textarea name="Text1" cols="40" rows="5" placeholder="Dein Text zum tippen" id="input_text"></textarea>
         <button onclick="start()">
+            Starten
         </button>
         <div style="display: flex;">
             <p style="white-space: nowrap; background: red;" id="text_alt" ></p>
@@ -61,6 +62,9 @@
                 }
                 document.getElementById("text2").innerHTML = text.substring(b+1);
                 b++;
+                if(b === 2){
+                    seconds = new Date() / 1000;
+                }
                 if(b > text.length){
                     document.getElementById("text_alt").innerHTML = "";
                     document.getElementById("text_aktuell").innerHTML = ""; 
