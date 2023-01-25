@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bits N Bytes</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---- <link rel="stylesheet" href="../css/uikit.min.css" style=" display: flex;" />
+        <link rel="stylesheet" href="../css/uikit-img-style.css" />
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/todo.css">
+        <link rel="stylesheet" href="../css/clock.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
+        <script src="../js/uikit.min.js"></script>
+        <script src="../js/uikit-icons.min.js"></script>
+        <script src="../js/uikit.js"></script>
+      
+
+    </head>
+    <body>
+        <p>
+        </p>
+        <textarea name="Text1" cols="40" rows="5" placeholder="Dein Text zum tippen" id="input_text"></textarea>
+        <button onclick="start()">
+        </button>
+        <div style="display: flex; justify-content: space-between;">
+            <p id="text">Hier kommt der Text</p>
+        </div>
+        
+<script>
+
+    
+    async function check(letter) {
+        return new Promise((resolve) =>{
+        setTimeout(() =>{
+        if(key === letter){resolve(true);}
+        else{
+            resolve(false);
+        }
+    },0.01   )
+})
+    }
+    var ub = false;
+    var key;
+    document.addEventListener('keyup', (e) => {
+        
+        if(e.key != "Shift" ){
+            key = e.key;
+            ub = true;
+        }        
+    });
+    var run = false;
+    async function start(){
+        if(run === false){
+        run = true;
+        var text = document.getElementById("input_text").value;
+        const test_s = text.split("");
+        console.log(test_s);
+        var task = [];
+        var b = 0;
+        for (const element of test_s) {
+            console.log(element);
+            //task.push(check(element));
+            var loop = false;
+            document.getElementById("text").innerHTML = text.substring(b);
+            while(!loop){    
+            console.log(element);
+            loop = await check(element);
+            }
+            key = "";
+            b++;
+        }
+    run = false
+    }
+}
+
+</script>       
+    </body>
+</html>
