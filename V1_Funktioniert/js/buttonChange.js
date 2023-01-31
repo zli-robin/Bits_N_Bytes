@@ -1,14 +1,20 @@
 function changeImageAPI() {
-    if (document.getElementById("imgClickAndChangeAPI").src == ""){
-        document.getElementById("imgClickAndChangeAPI").src = "";
-    } else {
-        document.getElementById("imgClickAndChangeAPI").src = "";
-    }
+  let img = document.getElementById("imgClickAndChangeAPI");
+  if (img.src.match("../images/appDevAc.png")) {
+    img.src = "../images/appDev.png";
+  } else {
+    img.src = "../images/appDevAc.png";
+  }
 }
+
 function changeImagePLA() {
-    if (document.getElementById("imgClickAndChangePLA").src == ""){
-        document.getElementById("imgClickAndChangePLA").src = "";
-    } else {
-        document.getElementById("imgClickAndChangePLA").src = "";
-    }
+  let img = document.getElementById("imgClickAndChangePLA");
+  if (img.src.match("../images/platformDevAc.png")) {
+    img.src = "../images/platformDev.png";
+  } else {
+    img.src = "../images/platformDevAc.png";
+  }
 }
+
+document.getElementById("imgClickAndChangeAPI").addEventListener("click", changeImageAPI);
+document.getElementById("imgClickAndChangePLA").addEventListener("click", changeImagePLA);
