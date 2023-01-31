@@ -29,14 +29,22 @@
                         <a class="navBarText">Menu</a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-nav-divider"></li>
-                                <li class="uk-nav-header">customize</li>
-                                <button onclick="changeImage()">Change Wallpaper</button>
-								                <li><input type="button" value="Uhr" onClick="showHideWidget('widget2');"/></li>
-                                <li><input type="button" value="To-Do Liste" onClick="showHideWidget('widget1');"/></li>
-                                <li><input type="button" value="Wetter" onClick="showHideWidget('widget3');"/></li>
-                                <li><input type="button" value="Wetter Map" onClick="showHideWidget('widget4');"/></li>
-                                <li class="uk-nav-divider"></li>
+                                <li class="uk-nav-header uk-flex-center">customize</li>
+                                <li class="uk-nav-divider uk-margin-bottom"></li>
+                                <button class="uk-margin-medium-bottom" onclick="changeImage()">Change Wallpaper</button>
+                                <div class="uk-grid-column-small uk-grid-row-medium uk-child-width-1-3@s uk-text-center">
+                                    <input title="Uhr" type="image" src="../images/clock.png" onClick="showHideWidget('widget2');" name="saveForm" class="WidgetButton " />
+                                    <input title="ToDo" type="image" src="../images/todo.png" onClick="showHideWidget('widget1');" name="saveForm" class="WidgetButton " />
+                                    <input title="Wetter" type="image" src="../images/weather.png" onClick="showHideWidget('widget3');" name="saveForm" class="WidgetButton " />
+                                    <input title="WetterKarte" type="image" src="../images/weatherMap.png" onClick="showHideWidget('widget4');" name="saveForm" class="WidgetButton " />
+                                </div>
+                                <li class="uk-margin-top uk-nav-divider"></li>
+                                <li class="uk-active">What are you?</li>
+                                <div class="uk-grid-column-small uk-grid-row-medium uk-child-width-1-3@s uk-text-center">
+                                    <input title="Uhr" type="image" src="../images/appDev.png" onClick="showHideWidget('widget1'); changeImageAPI();" name="saveForm" class="WidgetButton" id="imgClickAndChangeAPI"/>
+                                    <input title="ToDo" type="image" src="../images/platformDev.png" onClick="showHideWidget('widget1'); changeImagePLA();" name="saveForm" class="WidgetButton" id="imgClickAndChangePLA"/>
+                                </div>
+                                <li class="uk-margin-top uk-nav-divider"></li>
                                 <li class="uk-active">Credits</li>
                                 <li><a href="credits.html">Who made it?</a></li>
                             </ul>

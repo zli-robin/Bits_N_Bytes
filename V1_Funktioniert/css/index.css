@@ -98,3 +98,10 @@
       opacity: 0;
       z-index: 0;
     }
+
+    /* Widget Buttons */
+
+    .WidgetButton {
+        width: 30%;
+        height: 30%;
+    }

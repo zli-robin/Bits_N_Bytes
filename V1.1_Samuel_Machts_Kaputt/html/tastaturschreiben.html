@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bits N Bytes</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---- <link rel="stylesheet" href="../css/uikit.min.css" style=" display: flex;" />
+        <link rel="stylesheet" href="../css/uikit-img-style.css" />
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/todo.css">
+        <link rel="stylesheet" href="../css/clock.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
+        <script src="../js/uikit.min.js"></script>
+        <script src="../js/uikit-icons.min.js"></script>
+        <script src="../js/uikit.js"></script>
+      
+
+    </head>
+    <body>
+        <p>
+        </p>
+        <textarea name="Text1" cols="40" rows="5" placeholder="Dein Text zum tippen" id="input_text"></textarea>
+        <button onclick="start()">
+            Starten
+        </button>
+        <div style="display: flex;">
+            <p style="white-space: nowrap; background: red;" id="text_alt" ></p>
+            <p style="white-space: nowrap; background: blue" id="text_aktuell"> </p>
+            <p style="white-space: nowrap;" id="text2">Hier kommt der Text</p>
+          
+         
+        </div>
+        
+<script>
+    async function check(letter) {
+        return new Promise((resolve) =>{
+            setTimeout(() =>{
+                resolve();
+            },0.01   )
+        })
+    }
+
+    var key;
+    var letter;
+    var fehler = 0;
+    document.addEventListener('keyup', (e) => {
+        if(e.key != "Shift" && run === true ){
+            if(e.key === letter){
+                console.log(e.key+"  "+letter);
+                console.log((text.length -b ) *-1);
+                console.log(text.substring(0, (text.length - b)));
+                console.log(text.substring(0, -2));
+                console.log(text);
+                document.getElementById("text_alt").innerHTML = text.substring(0, b);
+                document.getElementById("text_aktuell").innerHTML = test_s[b];
+                if(test_s[b] === " "){
+                    document.getElementById("text2").innerHTML = "&nbsp"+text.substring(b+1);
+                    document.getElementById("text_aktuell").innerHTML = " ";
+                }
+                else{
+                    document.getElementById("text2").innerHTML = text.substring(b+1);
+                }
+                document.getElementById("text2").innerHTML = text.substring(b+1);
+                b++;
+                if(b === 2){
+                    seconds = new Date() / 1000;
+                }
+                if(b > text.length){
+                    document.getElementById("text_alt").innerHTML = "";
+                    document.getElementById("text_aktuell").innerHTML = ""; 
+                    if(fehler != 0){
+                        document.getElementById("text2").innerHTML = "Du hattest "+text.length+" Zeichen und hast eine Fehlerquote von "+Math.round(fehler / text.length * 100, 2)+ "%. Bei "+fehler +" Fehlern. Und du hast dafür "+(new Date() / 1000 - seconds)+" Sekunden gebraucht";
+                    }
+                    else{
+                        document.getElementById("text2").innerHTML = "Bravo du hast keine Fehler bei "+text.length+" Zeichen. Und du hast dafür "+(new Date() / 1000 - seconds)+" Sekunden gebraucht";
+                    }
+                    run = false
+                }
+                else{
+                letter = test_s[b-1];
+                }
+            }
+            else
+            {
+                fehler++;
+            }
+        }        
+    });
+
+    var run = false;
+    var loop = false;
+    var b = 1;
+    var test_s = [];
+    var text;
+    var seconds
+    async function start(){
+        seconds = new Date() / 1000;
+        if(run === false){
+        b = 0;
+        run = true;
+        text = document.getElementById("input_text").value;
+        test_s = text.split("");
+        console.log(test_s);
+        document.getElementById("text2").innerHTML = text.substring(1);
+        document.getElementById("text_aktuell").innerHTML = test_s[0];
+        letter= test_s[0];
+        b++;
+        
+    }
+}
+
+</script>       
+    </body>
+</html>
