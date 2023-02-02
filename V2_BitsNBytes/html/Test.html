@@ -2,35 +2,177 @@
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Save Text As File JavaScript | CodingNepal</title>
-    <link rel="stylesheet" href="../css/txtfile.css">
+    <meta charset="utf-8">  
+    <title>Custom Right Click Context Menu | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/txtfile.js" defer></script>
+    <!-- Iconscout Link For Icons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   </head>
   <body>
     <div class="wrapper">
-      <textarea spellcheck="false" placeholder="Enter something to save" required>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsuam has been the industries standard dummy texts ever since this 1500s, when an unknown printer took a galley of type and scrambled it to make a type of dollar specimen book. It have survived not only five centuries, but also from the leap into electronic typesetting.</textarea>
-      <div class="file-options">
-        <div class="option file-name">
-          <label>File name</label>
-          <input type="text" spellcheck="false" placeholder="Enter file name">
-        </div>
-        <div class="option save-as">
-          <label>Save as</label>
-          <div class="select-menu">
-            <select>
-              <option value="text/plain">Text File (.txt)</option>
-              <option value="text/javascript">JS File (.js)</option>
-              <option value="text/html">HTML File (.html)</option>
-              <option value="image/svg+xml">SVG File (.svg)</option>
-              <option value="application/msword">Doc File (.doc)</option>
-              <option value="application/vnd.ms-powerpoint">PPT File (.ppt)</option>
-            </select>
-          </div>
+      <div class="content">
+        <ul class="menu">
+          <li class="item">
+            <i class="uil uil-eye"></i>
+            <span>Preview</span>
+          </li>
+          <li class="item share">
+            <div>
+              <i class="uil uil-share"></i>
+              <span>Share</span>
+            </div>
+            <i class="uil uil-angle-right"></i>
+            <ul class="share-menu">
+              <li class="item">
+                <i class="uil uil-twitter-alt"></i>
+                <span>Twitter</span>
+              </li>
+              <li class="item">
+                <i class="uil uil-instagram"></i>
+                <span>Instagram</span>
+              </li>
+              <li class="item">
+                <i class="uil uil-dribbble"></i>
+                <span>Dribble</span>
+              </li>
+              <li class="item">
+                <i class="uil uil-telegram-alt"></i>
+                <span>Telegram</span>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <i class="uil uil-link-alt"></i>
+            <span>Get Link</span>
+          </li>
+          <li class="item">
+            <i class="uil uil-edit"></i>
+            <span>Rename</span>
+          </li>
+          <li class="item">
+            <i class="uil uil-trash-alt"></i>
+            <span>Delete</span>
+          </li>
+        </ul>
+        <div class="setting">
+          <li class="item">
+            <i class="uil uil-setting"></i>
+            <span>Settings</span>
+          </li>
         </div>
       </div>
-      <button class="save-btn" type="button">Save As Text File</button>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
+
+<style>
+
+    /* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #8B55E9 0%, #5D6BE6 100%)
+}
+.wrapper{
+  visibility: hidden;
+  position: absolute;
+  width: 300px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+.wrapper .menu{
+  padding: 10px 12px;
+}
+.content .item{
+  list-style: none;
+  font-size: 22px;
+  height: 50px;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  padding: 0 5px 0 10px;
+}
+.content .item:hover{
+  background: #f2f2f2;
+}
+.content .item span{
+  margin-left: 8px;
+  font-size: 19px;
+}
+.content .setting{
+  display: flex;
+  margin-top: -5px;
+  padding: 5px 12px;
+  border-top: 1px solid #ccc;
+}
+.content .share{
+  position: relative;
+  justify-content: space-between;
+}
+.share .share-menu{
+  position: absolute;
+  background: #fff;
+  width: 200px;
+  right: -200px;
+  top: -35px;
+  padding: 13px;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+.share:hover .share-menu{
+  opacity: 1;
+  pointer-events: auto;
+}
+</style>
+
+
+<script>
+
+const contextMenu = document.querySelector(".wrapper"),
+shareMenu = contextMenu.querySelector(".share-menu");
+
+window.addEventListener("contextmenu", e => {
+    e.preventDefault();
+    let x = e.offsetX, y = e.offsetY,
+    winWidth = window.innerWidth,
+    winHeight = window.innerHeight,
+    cmWidth = contextMenu.offsetWidth,
+    cmHeight = contextMenu.offsetHeight;
+
+    if(x > (winWidth - cmWidth - shareMenu.offsetWidth)) {
+        shareMenu.style.left = "-200px";
+    } else {
+        shareMenu.style.left = "";
+        shareMenu.style.right = "-200px";
+    }
+
+    x = x > winWidth - cmWidth ? winWidth - cmWidth - 5 : x;
+    y = y > winHeight - cmHeight ? winHeight - cmHeight - 5 : y;
+    
+    contextMenu.style.left = `${x}px`;
+    contextMenu.style.top = `${y}px`;
+    contextMenu.style.visibility = "visible";
+});
+
+document.addEventListener("click", () => contextMenu.style.visibility = "hidden");
+</script>

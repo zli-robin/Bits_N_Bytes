@@ -9,12 +9,14 @@
         <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="../css/todo.css">
         <link rel="stylesheet" href="../css/timer.css">
-        <link rel="stylesheet" href="../css/tiktaktoe.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         <link rel="stylesheet" href="../css/draw.css">
         <link rel="stylesheet" href="../css/countdown.css">
         <link rel="stylesheet" href="../css/txtfile.css">
+        <link rel="stylesheet" href="../css/rechner.css">
+        <link rel="stylesheet" href="../css/passwdgen.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
 
         <script src="../js/uikit.min.js"></script>
@@ -25,8 +27,10 @@
         <script src="../js/timer.js" defer></script>
         <script src="../js/tastatur.js" defer></script>
         <script src="../js/countdown.js"></script>
-        <script src="../js/tiktaktoe.js"></script>
         <script src="../js/txtfile.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="../js/rechner.js" defer></script>
+        <script src="../js/passwdgen.js" defer></script>
 
       
 
@@ -53,16 +57,16 @@
                                 <input title="Draw" type="image" src="../images/draw.png" onClick="showHideWidget('widget5');" name="saveForm" class="WidgetButton " />
                                 <input title="Wetter" type="image" src="../images/weather.png" onClick="showHideWidget('widget3');" name="saveForm" class="WidgetButton " />
                                 <input title="WetterKarte" type="image" src="../images/weatherMap.png" onClick="showHideWidget('widget4');" name="saveForm" class="WidgetButton " />
-                                <input title="Threatmap" type="image" src="../images/hacker.png" onClick="showHideWidget('widget8');" name="saveForm" class="WidgetButton " />
+                                <input title="calculator" type="image" src="../images/calculator.png" onClick="showHideWidget('widget8');" name="saveForm" class="WidgetButton " />
                                 <input title="Schreibtrainer" type="image" src="../images/tastatur.png" onClick="showHideWidget('widget7');" name="saveForm" class="WidgetButton " />
-                                <input title="Tik Tak Toe" type="image" src="../images/tic tac toe.png" onClick="showHideWidget('widget10');" name="saveForm" class="WidgetButton " />
-                                <input title="Sonstiges" type="image" src="../images/" onClick="showHideWidget('widget11');" name="saveForm" class="WidgetButton " />
+                                <input title="Text" type="image" src="../images/text.png" onClick="showHideWidget('widget10');" name="saveForm" class="WidgetButton " />
+                                <input title="Sonstiges" type="image" src="../images/passgen.png" onClick="showHideWidget('widget11');" name="saveForm" class="WidgetButton " />
                             </div>
                             <li class="uk-margin-top uk-nav-divider"></li>
                             <li class="uk-active uk-margin-bottom">What are you?</li>
                             <div class="uk-grid-column-small uk-grid-row-medium uk-child-width-1-3@s uk-text-center">
-                                <input title="Applikationsentwickler" type="image" src="../images/appDev.png" onClick="changeImageAPI();" name="saveForm" class="WidgetButton" id="imgClickAndChangeAPI"/>
-                                <input title="Plattformentwickler" type="image" src="../images/platformDev.png" onClick="changeImagePLA();" name="saveForm" class="WidgetButton" id="imgClickAndChangePLA"/>
+                                <input title="Applikationsentwickler" type="image" src="../images/appDev.png" onClick="APIWidget()" name="saveForm" class="WidgetButton" id="imgClickAndChangeAPI"/>
+                                <input title="Plattformentwickler" type="image" src="../images/platformDev.png" onClick="PLAWidgets()" name="saveForm" class="WidgetButton" id="imgClickAndChangePLA"/>
                             </div>
                             <li class="uk-margin-top uk-nav-divider"></li>
                             <li class="uk-active">Credits</li>
@@ -110,6 +114,38 @@
                 widget.style.display = "none";
               }
             }
+
+            function PLAWidgets() {
+                widget1.style.display = "none";
+                widget2.style.display = "none";
+                widget3.style.display = "none";
+                widget4.style.display = "none";
+                widget5.style.display = "none";
+                widget6.style.display = "none";
+                widget7.style.display = "none";
+                widget8.style.display = "none";
+                widget9.style.display = "none";
+                widget10.style.display = "none";
+                widget11.style.display = "none";
+              
+            }
+
+            function APIWidget() {
+                widget1.style.display = "block";
+                widget2.style.display = "block";
+                widget3.style.display = "block";
+                widget4.style.display = "block";
+                widget5.style.display = "block";
+                widget6.style.display = "block";
+                widget7.style.display = "block";
+                widget8.style.display = "block";
+                widget9.style.display = "block";
+                widget10.style.display = "block";
+                widget11.style.display = "block";
+              
+            }
+
+
           </script>
     
     
@@ -118,7 +154,7 @@
 
 
 
-                <div id="widget1" class="widget zoom wrapper" style="display: none;">
+                <div id="widget1" class="widget zoom wrapper">
                    
                     <div class="task-input">
                       <input type="text" placeholder="Add a new task">
@@ -252,6 +288,47 @@
                 
                 </div>
 
+
+                <div id="widget8" class="widget">
+                  
+                  <div class="center">
+                    <form name="forms">
+                       <input class="inputtext" type="text" id="display" name="display" disabled style="height: 60px;
+                       width: 300px;
+                       margin-top: 40px;
+                       border-radius: 1px;
+                       border: 1px solid #e1e7ea;
+                       color: black;
+                       font-size: 22px;
+                       font-weight: bold;
+                       text-align: right;
+                       padding-right: 20px;
+                       background: linear-gradient(#d1dce0,#dfe6e9);">
+                       <div class="rechnerbuttons">
+                          <input class="inputbuttons" type="button" id="seven" value="7">
+                          <input class="inputbuttons" type="button" id="eight" value="8">
+                          <input class="inputbuttons" type="button" id="nine" value="9">
+                          <input class="inputbuttons" type="button" id="divide" value="/"><br>
+                          <input class="inputbuttons" type="button" id="four" value="4">
+                          <input class="inputbuttons" type="button" id="five" value="5">
+                          <input class="inputbuttons" type="button" id="six" value="6">
+                          <input class="inputbuttons" type="button" id="multi" value="*"><br>
+                          <input class="inputbuttons" type="button" id="one" value="1">
+                          <input class="inputbuttons" type="button" id="two" value="2">
+                          <input class="inputbuttons" type="button" id="three" value="3">
+                          <input class="inputbuttons" type="button" id="subs" value="-"><br>
+                          <input class="inputbuttons" type="button" id="dot" value=".">
+                          <input class="inputbuttons" type="button" id="zero" value="0">
+                          <input class="inputbuttons" type="button" id="add" value="+">
+                          <input class="inputbuttons" type="button" id="clear" value="C"><br>
+                          <input class="inputbuttons" type="button" id="equal" value="=">
+                       </div>
+                    </form>
+                 </div>
+                
+                </div>
+
+
                 <div id="widget9" class="widget">
                   
                   <div class="well">
@@ -275,7 +352,7 @@
                 </div>
 
                 <div id="widget10" class="widget wrapper">
-                    <textarea spellcheck="false" placeholder="Enter something to save" required>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsuam has been the industries standard dummy texts ever since this 1500s, when an unknown printer took a galley of type and scrambled it to make a type of dollar specimen book. It have survived not only five centuries, but also from the leap into electronic typesetting.</textarea>
+                    <textarea spellcheck="false" placeholder="Enter something to save" required>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text.</textarea>
                     <div class="file-options">
                       <div class="option file-name">
                         <label>File name</label>
@@ -301,6 +378,53 @@
 
                 <div id="widget11" class="widget">
             
+                  <div class="passgencontainer">
+                    <h2>Password Generator</h2>
+                    <div class="passgenwrapper">
+                      <div class="input-box">
+                        <input type="text" disabled>
+                        <span class="material-symbols-rounded">copy_all</span>
+                      </div>
+                      <div class="pass-indicator"></div>
+                      <div class="pass-length">
+                        <div class="details">
+                          <label class="title">Password Length</label>
+                          <span></span>
+                        </div>
+                        <input type="range" min="1" max="30" value="15" step="1">
+                      </div>
+                      <div class="pass-settings">
+                        <label class="title">Password Settings</label>
+                        <ul class="options">
+                          <li class="option">
+                            <input type="checkbox" id="lowercase" checked>
+                            <label for="lowercase">Lowercase (a-z)</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="uppercase">
+                            <label for="uppercase">Uppercase (A-Z)</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="numbers">
+                            <label for="numbers">Numbers (0-9)</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="symbols">
+                            <label for="symbols">Symbols (!-$^+)</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="exc-duplicate">
+                            <label for="exc-duplicate">Exclude Duplicate</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="spaces">
+                            <label for="spaces">Include Spaces</label>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="generate-btn">Generate Password</button>
+                    </div>
+                  </div>
 
                 </div>
                 <!-- Include timer.js -->
@@ -341,7 +465,6 @@
     
     
             <!-- Holt die lokale JS-Datei -->
-            <script src="js/zli-background.js"></script>
             <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
             <script>
