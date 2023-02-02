@@ -143,8 +143,8 @@
     
     #widget8 {
       position: absolute;
-      top: 1%;
-      left: 1%;
+      top: 3%;
+      left: 0%;
       width: 360px;
       height: fit-content;
       background-color: rgba(109, 109, 109, 0.331);
@@ -169,6 +169,7 @@
       transition: all 0.3s ease;
     }
     #widget10 {
+      display: none;
       position: absolute;
       top: 0%;
       left: 0%;
@@ -182,6 +183,7 @@
       transition: all 0.3s ease;
     }
     #widget11 {
+      display: none;
       position: absolute;
       top: 1%;
       left: 1%;
