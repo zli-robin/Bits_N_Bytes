@@ -167,6 +167,24 @@
               </ul>
             </li>
 
+              <li class="item share">
+                  <div>
+                      <img src="../images/MusicIco.png" alt="">
+                      <span>Music</span>
+                  </div>
+                  <i class="uil uil-angle-right"></i>
+                  <ul class="share-menu">
+                      <li class="item" onClick="showHideWidget('widget15');">
+                          <img src="../images/RadioIco.png" alt="">
+                          <span>Radio</span>
+                      </li>
+                      <li class="item" onClick="showHideWidget('widget15');">
+                          <img src="../images/RadioIco.png" alt="">
+                          <span>Radio</span>
+                      </li>
+                  </ul>
+              </li>
+
 
 
             <hr>
@@ -242,6 +260,8 @@
                 widget11.style.display = "none";
                 widget12.style.display = "none";
                 widget13.style.display = "none";
+                widget14.style.display = "none";
+                widget15.style.display = "none";
               
             }
 
@@ -259,6 +279,8 @@
                 widget11.style.display = "block";
                 widget12.style.display = "block";
                 widget13.style.display = "block";
+                widget14.style.display = "block";
+                widget15.style.display = "block";
               
             }
 
@@ -309,7 +331,6 @@
                   <iframe src="https://www.meteoblue.com/en/weather/maps/widget/obergrossegg_switzerland_11579273?windAnimation=0&windAnimation=1&gust=0&gust=1&satellite=0&satellite=1&cloudsAndPrecipitation=0&cloudsAndPrecipitation=1&temperature=0&temperature=1&sunshine=0&sunshine=1&extremeForecastIndex=0&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=9&autowidth=manu"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 270px"></iframe>
                 
                 </div>
-
 
 
 
@@ -565,9 +586,6 @@
                     <div class="qr-code">
                       <img src="" alt="qr-code">
                     </div>
-                  
-              
-
 
 
 
@@ -633,6 +651,13 @@
                             <img src="image-placeholder.svg" alt="preview-img">
                         </div>
                     </div>
+
+                    <div id="widget15" class="widget zoom">
+
+                        <iframe src="https://radio-player.europeana.eu/" border="0" frameborder="0" width="635" height="390"></iframe>
+
+                    </div>
+
                     <div class="controls">
                         <button class="reset-filter">Reset Filters</button>
                         <div class="row">
