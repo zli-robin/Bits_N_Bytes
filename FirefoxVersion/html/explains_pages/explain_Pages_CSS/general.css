@@ -1,6 +1,6 @@
 body {
     font-family: Helvetica, sans-serif;
-    line-height: 2em;
+    line-height: 1.5em;
     margin: 0;
     background-image: url("../../../images/explains_img/bar.gif");
     background-size: cover;
@@ -28,10 +28,15 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.Content-Menu img {
+  width: 103%;
+  height: 95%;
+  border-radius: 10px;
+}
 
 .Content-Background {
     position: relative;
     padding: 1em;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
 }
