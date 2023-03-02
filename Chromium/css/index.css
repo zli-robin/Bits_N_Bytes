@@ -1,0 +1,255 @@
+    html {
+      height: auto;
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      overflow:hidden;
+      
+    }
+
+
+    .zoom {
+
+      zoom: 71%;
+
+    }
+    
+    /* CSS */
+    .widget {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+      cursor:all-scroll;
+    }
+    /* Style for the input and button */
+    input {
+      margin-right: 10px;
+    }
+    button {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    /* Style for the select element */
+    select {
+      margin-top: 10px;
+      width: 150px;
+      height: 100px;
+    }
+    #widgetcontainer {
+      position:absolute;
+      margin: 0;
+      width: 500%;
+      height: 500%;
+    }
+    #widget1 {
+      position: absolute;
+      top: 3%;
+      left: 7.4%;
+      width:fit-content;
+      height: fit-content;
+      background-color: rgba(255, 255, 255, 0.767);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    #widget2 {
+      position: absolute;
+      top: 0%;
+      left: 8.6%;
+      width: auto;
+      height: auto;
+      background-color: rgba(109, 109, 109, 0.331);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    #widget3 {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(109, 109, 109, 0.331);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    #widget4 {
+      position: fixed;
+      top: 0%;
+      left: 79%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(109, 109, 109, 0.331);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    #widget5 {
+      position: fixed;
+      top: 30%;
+      left: 0%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(109, 109, 109, 0.331);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 9;
+      transition: all 0.3s ease;
+    }
+
+    #widget6 {
+      position: fixed;
+      top: 0%;
+      left: 30%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(109, 109, 109, 0.589);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    #widget7 {
+      display: none;
+      position: fixed;
+      top: 0%;
+      left: 76.8%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(109, 109, 109, 0.589);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 9;
+      transition: all 0.3s ease;
+    }
+    
+    #widget8 {
+      display: none;
+      position: absolute;
+      top: 3%;
+      left: 0%;
+      width: 360px;
+      height: fit-content;
+      background-color: rgba(109, 109, 109, 0.331);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    #widget9 {
+      position: absolute;
+      top: 0%;
+      left: 11.6%;
+      width: auto;
+      height: auto;
+      background-color: rgba(109, 109, 109, 0.331);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    #widget10 {
+      display: none;
+      position: absolute;
+      top: 5%;
+      left: 7%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(188, 188, 188, 0.708);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    #widget11 {
+      display: none;
+      position: absolute;
+      top: 7%;
+      left: 6.5%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(109, 109, 109, 0.331);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    #widget12 {
+      display: block;
+      position: absolute;
+      top: 6%;
+      left: 11%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(109, 109, 109, 0.331);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+    #widget13 {
+      display: none;
+      position: absolute;
+      top: 1%;
+      left: 1%;
+      width: fit-content;
+      height: fit-content;
+      max-height: 500px;
+      background-color: rgba(255, 255, 255, 0.607);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    #widget14 {
+      display: none;
+      position: absolute;
+      top: 6%;
+      left: 11%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(255, 255, 255, 0.607);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    .hidden {
+      visibility: hidden;
+      opacity: 0;
+      z-index: 0;
+    }
+
+    .WidgetButton {
+      width: 30%;
+      height: 30%;
+  }
