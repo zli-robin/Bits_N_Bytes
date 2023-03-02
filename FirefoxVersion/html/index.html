@@ -1,0 +1,720 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Bits N Bytes</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/uikit.min.css" />
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <!--<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+        <script src="../js/uikit.min.js"></script>
+        <script src="../js/uikit-icons.min.js"></script>
+        <script src="../js/uikit.js"></script>
+        <script src="../js/background.js"></script>
+        <script src="../js/draw.js" defer></script>
+        <script src="../js/timer.js" defer></script>
+        <script src="../js/tastatur.js" defer></script>
+        <script src="../js/countdown.js"></script>
+        <script src="../js/txtfile.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="../js/rechner.js" defer></script>
+        <script src="../js/passwdgen.js" defer></script>
+
+
+    </head>
+    <body>
+    <script>
+    // Check if user has visited site before
+    if (localStorage.getItem('visited') === null) {
+    console.log('Welcome to our site!');
+    alert("HI, welcome to the Dashboard | Press rightclick on the Dasboard Background to get a menu!")
+    // Set a "visited" flag in local storage
+    localStorage.setItem('visited', true);
+    } else {
+    console.log('Welcome back to our site!');
+    }
+    </script>
+
+    <div class="clickwrapper">
+        <div class="clickcontent">
+          <ul class="menu">
+            <li class="item" onclick="contextMenu.style.visibility = 'hidden'"><span class="close">Menü schliessen</span></li>
+            <hr>
+            <li class="item" onclick="changeImage()">
+              <img src="../images/wallpaper.png" alt="change wallpaper">
+              <span>Change Wallpaper</span>
+            </li>
+            <hr>
+
+
+            <li class="item" onClick="showHideWidget('widget1');">
+              <img src="../images/todo.png" alt="">
+              <span>To-Do Liste</span>
+            </li>
+
+            <li class="item share">
+              <div>
+                <i class="uil uil-clock"></i>
+                <span>Zeit</span>
+              </div>
+              <i class="uil uil-angle-right"></i>
+              <ul class="share-menu">
+                <li class="item" onClick="showHideWidget('widget2');">
+                  <img src="../images/clock.png" alt="clock">
+                  <span>Uhr</span>
+                </li>
+                <li class="item" onClick="showHideWidget('widget9');">
+                  <img src="../images/timer.png" alt="timer">
+                  <span>Timer</span>
+                </li>
+                <li class="item" onClick="showHideWidget('widget6');">
+                  <img src="../images/stopuhr.png" alt="">
+                  <span>Stoppuhr</span>
+                </li>
+              </ul>
+            </li>
+
+
+            <li class="item share">
+              <div>
+                <img src="../images/wettericon.png" alt="">
+                <span>Wetter</span>
+              </div>
+              <i class="uil uil-angle-right"></i>
+              <ul class="share-menu">
+                <li class="item" onClick="showHideWidget('widget3');">
+                  <img src="../images/weather.png" alt="">
+                  <span>Wetter</span>
+                </li>
+                <li class="item" onClick="showHideWidget('widget4');">
+                  <img src="../images/weatherMap.png" alt="">
+                  <span>Wetterkarte</span>
+                </li>
+              </ul>
+            </li>
+
+
+
+            <li class="item share">
+              <div>
+                <img src="../images/creationicon.png" alt="">
+                <span>Kreationen</span>
+              </div>
+              <i class="uil uil-angle-right"></i>
+              <ul class="share-menu">
+                <li class="item" onClick="showHideWidget('widget5');">
+                  <img src="../images/draw.png" alt="">
+                  <span>Draw</span>
+                </li>
+                <li class="item" onClick="showHideWidget('widget10');">
+                  <img src="../images/text.png" alt="">
+                  <span>Text zu Datei</span>
+                </li>
+                <li class="item" onClick="showHideWidget('widget14');">
+                  <img src="../images/imgeditor.png" alt="">
+                  <span>Bild Editor</span>
+                </li>
+              </ul>
+            </li>
+
+
+            <li class="item share">
+              <div>
+                <img src="../images/tools.png" alt="">
+                <span>Tools</span>
+              </div>
+              <i class="uil uil-angle-right"></i>
+              <ul class="share-menu">
+                <li class="item" onClick="showHideWidget('widget11');">
+                  <img src="../images/passgen.png" alt="">
+                  <span>Password</span>
+                </li>
+                <li class="item" onClick="showHideWidget('widget13');">
+                  <img src="../images/qrgen.png" alt="">
+                  <span>QR-Code</span>
+                </li>
+                <li class="item" onClick="showHideWidget('widget8');">
+                  <img src="../images/calculator.png" alt="">
+                  <span>Rechner</span>
+                </li>
+              <li class="item" onClick="showHideWidget('widget12');">
+                  <img src="../images/snapdrop.png" alt="">
+                  <span>Snapdrop... File Share</span>
+              </li>
+              </ul>
+            </li>
+
+
+
+
+            <li class="item share">
+              <div>
+                <img src="../images/training.png" alt="">
+                <span>Training</span>
+              </div>
+              <i class="uil uil-angle-right"></i>
+              <ul class="share-menu">
+                <li class="item" onClick="showHideWidget('widget7');">
+                  <img src="../images/tastatur.png" alt="">
+                  <span>Typewriter</span>
+                </li>
+              </ul>
+            </li>
+
+              <li class="item share">
+                  <div>
+                      <img src="../images/MusicIco.png" alt="">
+                      <span>Music</span>
+                  </div>
+                  <i class="uil uil-angle-right"></i>
+                  <ul class="share-menu">
+                      <li class="item" onClick="showHideWidget('widget15');">
+                          <img src="../images/RadioIco.png" alt="">
+                          <span>NRJ</span>
+                      </li>
+                      <li class="item" onClick="showHideWidget('widget16');">
+                          <img src="../images/RadioIco.png" alt="">
+                          <span>Radio24</span>
+                      </li>
+                  </ul>
+              </li>
+
+            <hr>
+            <li class="item share">
+              <div>
+                <img src="../images/beruf.png" alt="">
+                <span>Beruf</span>
+              </div>
+              <i class="uil uil-angle-right"></i>
+              <ul class="share-menu">
+                <li class="item" onClick="PLAWidgets()">
+                  <img src="../images/platformDev.png" alt="">
+                  <span>Plattform</span>
+                </li>
+                <li class="item" onClick="APIWidget()">
+                  <img src="../images/appDev.png" alt="">
+                  <span>Applikation</span>
+                </li>
+              </ul>
+            </li>
+
+
+          </ul>
+          <div class="setting">
+            <li class="item" onClick="location.href='credits.html'">
+              <img src="../images/person.png" alt="">
+              <span>Credits</span>
+            </li>
+          </div>
+            <div style="padding: 5px; margin-left: 3px;">
+            <li class="item" onClick="location.href='explains.html'">
+              <p>❓</p>
+              <span>How</span>
+            </li>
+          </div>
+        </div>
+      </div>
+
+      <script src="../js/rightclick.js"></script>
+        <!-- Background -->
+        <img name="slide" width="100%" height="100%"/>
+        <!-- Background -->
+
+        <!-- Widget -->
+
+        <script type="text/javascript">
+            function showHideWidget(widgetID) {
+              var widget = document.getElementById(widgetID);
+              if (widget.style.display == "none") {
+                widget.style.display = "block";
+              } else {
+                widget.style.display = "none";
+              }
+            }
+
+            function PLAWidgets() {
+                widget1.style.display = "none";
+                widget2.style.display = "none";
+                widget3.style.display = "none";
+                widget4.style.display = "none";
+                widget5.style.display = "none";
+                widget6.style.display = "none";
+                widget7.style.display = "none";
+                widget8.style.display = "none";
+                widget9.style.display = "none";
+                widget10.style.display = "none";
+                widget11.style.display = "none";
+                widget12.style.display = "none";
+                widget13.style.display = "none";
+                widget14.style.display = "none";
+                widget15.style.display = "none";
+                widget16.style.display = "none";
+
+            }
+
+            function APIWidget() {
+                widget1.style.display = "block";
+                widget2.style.display = "block";
+                widget3.style.display = "block";
+                widget4.style.display = "block";
+                widget5.style.display = "block";
+                widget6.style.display = "block";
+                widget7.style.display = "block";
+                widget8.style.display = "block";
+                widget9.style.display = "block";
+                widget10.style.display = "block";
+                widget11.style.display = "block";
+                widget12.style.display = "block";
+                widget13.style.display = "block";
+                widget14.style.display = "block";
+                widget15.style.display = "block";
+                widget16.style.display = "block";
+
+            }
+
+
+          </script>
+
+
+            <div class="uk-position-cover" id="widgetcontainer">
+
+                <div id="widget1" class="widget zoom wrapper">
+
+                    <div class="task-input">
+                      <input type="text" placeholder="Add a new task">
+                    </div>
+                    <div class="controls">
+                      <div class="filters">
+                        <span class="active" id="all">All</span>
+                        <span id="pending">Pending</span>
+                        <span id="completed">Completed</span>
+                      </div>
+                      <button class="clear-btn">Clear All</button>
+                    </div>
+                    <ul class="task-box"></ul>
+
+                  <script src="../js/todo.js"></script>
+
+                </div>
+
+
+                <div id="widget2" class="widget zoom">
+
+                  <iframe style="max-width:900px;max-height:900px;" src="https://uhrzeit123.de/vollbild#background=slideshow&showtitle=false&showdate=false&showtimeofday=true&title=Aktuelle%20Uhrzeit&widget=yes" frameborder=0></iframe>
+                </div>
+
+                <div id="widget3" class="widget zoom">
+
+                  <iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 596px"></iframe>
+
+                </div>
+
+                <div id="widget4" class="widget zoom">
+
+                  <iframe src="https://www.meteoblue.com/en/weather/maps/widget/obergrossegg_switzerland_11579273?windAnimation=0&windAnimation=1&gust=0&gust=1&satellite=0&satellite=1&cloudsAndPrecipitation=0&cloudsAndPrecipitation=1&temperature=0&temperature=1&sunshine=0&sunshine=1&extremeForecastIndex=0&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=9&autowidth=manu"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 270px"></iframe>
+
+                </div>
+
+              <div id="widget5" class="widget">
+                <!-- <div data-track='hover'> -->
+                  <div class="containerdraw">
+                    <section class="tools-board">
+                      <div class="row">
+                        <label class="title">Shapes</label>
+                        <ul class="options">
+                          <li class="option tool" id="rectangle">
+                            <span>Rectangle</span>
+                          </li>
+                          <li class="option tool" id="circle">
+                            <span>Circle</span>
+                          </li>
+                          <li class="option tool" id="triangle">
+                            <span>Triangle</span>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="fill-color">
+                            <label for="fill-color">Fill color</label>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="row">
+                        <label class="title">Options</label>
+                        <ul class="options">
+                          <li class="option active tool" id="brush">
+                            <span>Brush</span>
+                          </li>
+                          <li class="option tool" id="eraser">
+                            <span>Eraser</span>
+                          </li>
+                          <li class="option">
+                            <input type="range" id="size-slider" min="1" max="30" value="5">
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="row colors">
+                        <label class="title">Colors</label>
+                        <ul class="options">
+                          <li class="option"></li>
+                          <li class="option selected"></li>
+                          <li class="option"></li>
+                          <li class="option"></li>
+                          <li class="option">
+                            <input type="color" id="color-picker" value="#4A98F7">
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="row buttons">
+                        <button class="clear-canvas">Clear Canvas</button>
+                        <button class="save-img">Save As Image</button>
+                      </div>
+                    </section>
+                    <section data-track='antimove' class="drawing-board">
+                      <canvas></canvas>
+                    </section>
+                  </div>
+                <!-- </div> -->
+              </div>
+
+
+
+                <div id="widget6" class="widget">
+
+                  <div>
+                    <h2 id="timer-value">00:00:00</h2>
+                    <button class="timerbutton" id="start-btn" style="background:green">Start</button>
+                    <button class="timerbutton" id="stop-btn" style="background:red">Stop</button>
+                    <button class="timerbutton" id="reset-btn" style="background:rgb(216, 130, 0)">Reset</button>
+                  </div>
+
+                </div>
+
+
+                <div id="widget7" class="widget">
+
+                  <textarea name="Text1" cols="40" rows="5" placeholder="Dein Text zum tippen" id="input_text"></textarea>
+                  <button onclick="start()">
+                      Starten
+                  </button>
+                  <div style="display: flex; color: white;">
+                      <p style="white-space: nowrap; background: rgb(1, 214, 107);" id="text_alt" ></p>
+                      <p style="white-space: nowrap; background: rgba(24, 24, 24, 0.447)" id="text_aktuell"> </p>
+                      <p id="text2">Hier kommt der Text</p>
+
+
+                  </div>
+
+                </div>
+
+
+                <div id="widget8" class="widget">
+
+                  <div class="center">
+                    <form name="forms">
+                       <input class="inputtext" type="text" id="display" name="display" disabled style="height: 60px;
+                       width: 300px;
+                       margin-top: 40px;
+                       border-radius: 1px;
+                       border: 1px solid #e1e7ea;
+                       color: black;
+                       font-size: 22px;
+                       font-weight: bold;
+                       text-align: right;
+                       padding-right: 20px;
+                       background: linear-gradient(#d1dce0,#dfe6e9);">
+                       <div class="rechnerbuttons">
+                          <input class="inputbuttons" type="button" id="seven" value="7">
+                          <input class="inputbuttons" type="button" id="eight" value="8">
+                          <input class="inputbuttons" type="button" id="nine" value="9">
+                          <input class="inputbuttons" type="button" id="divide" value="/"><br>
+                          <input class="inputbuttons" type="button" id="four" value="4">
+                          <input class="inputbuttons" type="button" id="five" value="5">
+                          <input class="inputbuttons" type="button" id="six" value="6">
+                          <input class="inputbuttons" type="button" id="multi" value="*"><br>
+                          <input class="inputbuttons" type="button" id="one" value="1">
+                          <input class="inputbuttons" type="button" id="two" value="2">
+                          <input class="inputbuttons" type="button" id="three" value="3">
+                          <input class="inputbuttons" type="button" id="subs" value="-"><br>
+                          <input class="inputbuttons" type="button" id="dot" value=".">
+                          <input class="inputbuttons" type="button" id="zero" value="0">
+                          <input class="inputbuttons" type="button" id="add" value="+">
+                          <input class="inputbuttons" type="button" id="clear" value="C"><br>
+                          <input class="inputbuttons" type="button" id="equal" value="=">
+                       </div>
+                    </form>
+                 </div>
+
+                </div>
+
+
+                <div id="widget9" class="widget">
+
+                  <div class="well">
+                    <time></time>
+                    <div class="button-group">
+                        <button class="countdownbutton" type="button" onclick="timer.pause()">Pause</button>
+                        <button class="countdownbutton" type="button" onclick="timer.resume()">Resume</button>
+                        <button class="countdownbutton" type="button" onclick="timer.stop()">Stop</button>
+                    </div>
+
+                    <div class="countdownform-group">
+                        <select class="countdownselect" style="max-height: 50px;" id="time-type">
+                            <option value="second">Second</option>
+                            <option value="minute">Minute</option>
+                            <option value="hour">Hour</option>
+                        </select>
+                        <input class="countdowninput" type="number" id="time-field" placeholder="54">
+                        <button class="countdownbutton" type="button" onclick="setTime()">Set</button>
+                    </div>
+                </div>
+                </div>
+
+                <div id="widget10" class="widget wrapper">
+                    <textarea spellcheck="false" placeholder="Enter something to save" required>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text.</textarea>
+                    <div class="file-options">
+                      <div class="option file-name">
+                        <label>File name</label>
+                        <input type="text" spellcheck="false" placeholder="Enter file name">
+                      </div>
+                      <div class="option save-as">
+                        <label>Save as</label>
+                        <div class="select-menu">
+                          <select>
+                            <option value="text/plain">Text File (.txt)</option>
+                            <option value="text/javascript">JS File (.js)</option>
+                            <option value="text/html">HTML File (.html)</option>
+                            <option value="image/svg+xml">SVG File (.svg)</option>
+                            <option value="application/msword">Doc File (.doc)</option>
+                            <option value="application/vnd.ms-powerpoint">PPT File (.ppt)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="save-btn" type="button">Save As Text File</button>
+                  </div>
+
+
+                <div id="widget11" class="widget">
+
+                  <div class="passgencontainer">
+                    <h2>Password Generator</h2>
+                    <div class="passgenwrapper">
+                      <div class="input-box">
+                        <input type="text" disabled>
+                        <span class="material-symbols-rounded">copy_all</span>
+                      </div>
+                      <div class="pass-indicator"></div>
+                      <div class="pass-length">
+                        <div class="details">
+                          <label class="title">Password Length</label>
+                          <span></span>
+                        </div>
+                        <input type="range" min="1" max="30" value="15" step="1">
+                      </div>
+                      <div class="pass-settings">
+                        <label class="title">Password Settings</label>
+                        <ul class="options">
+                          <li class="option">
+                            <input type="checkbox" id="lowercase" checked>
+                            <label for="lowercase">Lowercase (a-z)</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="uppercase">
+                            <label for="uppercase">Uppercase (A-Z)</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="numbers">
+                            <label for="numbers">Numbers (0-9)</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="symbols">
+                            <label for="symbols">Symbols (!-$^+)</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="exc-duplicate">
+                            <label for="exc-duplicate">Exclude Duplicate</label>
+                          </li>
+                          <li class="option">
+                            <input type="checkbox" id="spaces">
+                            <label for="spaces">Include Spaces</label>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="generate-btn">Generate Password</button>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <div id="widget12" class="widget">
+
+                  <iframe src="http://localhost:8080/" frameborder="0" width="300px" height="300px"></iframe>
+
+                </div>
+
+
+
+                <div id="widget13" class="widget qrgenwrapper">
+                    <header>
+                      <h1>QR Code Generator</h1>
+                    </header>
+                    <div class="grgenform">
+                      <input type="text" spellcheck="false" placeholder="Enter text or url">
+                      <button>Generate QR Code</button>
+                    </div>
+                    <div class="qr-code">
+                      <img src="" alt="qr-code">
+                    </div>
+
+                    <script>
+                      const qrgenwrapper = document.querySelector(".qrgenwrapper"),
+                      qrInput = qrgenwrapper.querySelector(".grgenform input"),
+                      generateBtnG = qrgenwrapper.querySelector(".grgenform button"),
+                      qrImg = qrgenwrapper.querySelector(".qr-code img");
+                      let preValue;
+
+                      generateBtnG.addEventListener("click", () => {
+                          let qrValue = qrInput.value.trim();
+                          if(!qrValue || preValue === qrValue) return;
+                          preValue = qrValue;
+                          generateBtnG.innerText = "Generating QR Code...";
+                          qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}`;
+                          qrImg.addEventListener("load", () => {
+                              qrgenwrapper.classList.add("active");
+                              generateBtnG.innerText = "Generate QR Code";
+                          });
+                      });
+
+                      qrInput.addEventListener("keyup", () => {
+                          if(!qrInput.value.trim()) {
+                              qrgenwrapper.classList.remove("active");
+                              preValue = "";
+                          }
+                      });
+                  </script>
+                </div>
+
+                <div id="widget14" class="widget container disable">
+                    <h2>Image Editor</h2>
+                    <div class="wrapper">
+                        <div class="editor-panel">
+                            <div class="filter">
+                                <label class="title">Filters</label>
+                                <div class="options">
+                                    <button id="brightness" class="active">Brightness</button>
+                                    <button id="saturation">Saturation</button>
+                                    <button id="inversion">Inversion</button>
+                                    <button id="grayscale">Grayscale</button>
+                                </div>
+                                <div class="slider">
+                                    <div class="filter-info">
+                                        <p class="name">Brighteness</p>
+                                        <p class="value">100%</p>
+                                    </div>
+                                    <input type="range" value="100" min="0" max="200">
+                                </div>
+                            </div>
+                            <div class="rotate">
+                                <label class="title">Rotate & Flip</label>
+                                <div class="options">
+                                    <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                                    <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                                    <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                                    <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-img">
+                            <img alt="Chose you IMG">
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button class="reset-filter">Reset Filters</button>
+                        <div class="row">
+                            <input type="file" class="file-input" accept="image/*" hidden>
+                            <button class="choose-img">Choose Image</button>
+                            <button class="save-img">Save Image</button>
+                        </div>
+
+                </div>
+
+                <script src="../js/imgeditor.js"></script>
+
+                </div>
+
+                <div id="widget15" class="widget">
+
+                    <iframe src="https://energy.ch" width="900px" height="500px"></iframe>
+
+                </div>
+
+                <div id="widget16" class="widget">
+
+                    <iframe src="https://www.radio24.ch" width="500px" height="900px"></iframe>
+
+                </div>
+                <!-- Include timer.js -->
+                <!-- Initialize timer.js -->
+                <script>
+                    let timer = new Timer({
+                        el: 'time',
+                        time: {
+                            second: 0,
+                            minute: 0,
+                            hour: 0,
+                        },
+                    });
+
+                    // Time getter
+                    function getTime() {
+                        var time = timer.get(document.querySelector('#time').value);
+                        document.querySelector('.disply-time').innerText = time;
+                    }
+
+                    // Time setter
+                    function setTime() {
+                        var time = document.querySelector('#time-type').value;
+                        var value = document.querySelector('#time-field').value;
+                        timer.set(time, value);
+                    }
+                </script>
+
+                </div>
+                <!-- Background -->
+
+            <!-- Holt die lokale JS-Datei -->
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+      <script>
+      $('.drawing-board[data-track=antimove]').on("mouseenter",function(){
+        $(this).parent().parent().draggable( "disable" );
+
+      });
+      $('.drawing-board[data-track=antimove]').on("mouseleave",function(){
+        $(this).parent().parent().draggable( "enable" );
+      });
+      $(function () {
+        // if (!disallowDrag) {
+          $(".widget").draggable({ containment: "window" });
+        // }
+        $(".widget").mousedown(function () {
+          $(this).css("z-index", 1);
+        });
+        $(".widget").mouseup(function () {
+          $(this).css("z-index", 0);
+        });
+        $("#show").click(function () {
+          $(".widget").removeClass("hidden");
+        });
+        $("#hide").click(function () {
+          $(".widget").addClass("hidden");
+        });
+      });
+   </script>
+    </body>
+</html>
