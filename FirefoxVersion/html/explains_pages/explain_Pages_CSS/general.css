@@ -17,6 +17,9 @@ body {
 
 header {
     background-color: grey;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
   }
   
 .Content-Menu {
