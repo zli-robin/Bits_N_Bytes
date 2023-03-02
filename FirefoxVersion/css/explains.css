@@ -11,39 +11,6 @@ header {
   background-color: grey;
 }
 
-.topnav {
-  overflow: hidden;
-  position: relative;
-}
-
-.topnav #myMenu {
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.topnav a {
-  float: left;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a.icon {
-  float: right;
-}
-
-.topnav a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  color: black;
-}
-
-.active {
-  background-color: #04aa6d;
-  color: white;
-}
-
 /* --------------------START CARDS---------------------*/
 
 section {
@@ -69,6 +36,8 @@ section {
   margin-left: 25%;
   position: relative;
   margin-right: 25%;
+  width: 120px;
+  height: 120px;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -77,10 +46,10 @@ section {
   font-size: 2rem;
   border-radius: 10%;
   padding-top: 1em;
-  padding-left: 1em;
   overflow: hidden;
   min-width: 300px;
-  height: 250px;
+  height: 230px;
+  text-align: center;
 }
 
 .card:hover {
