@@ -227,6 +227,12 @@
         <!-- Widget -->
 
         <script type="text/javascript">
+            // for the error handling
+            function ignorerror(){
+              return true;
+            }
+            window.onerror=ignorerror();    
+
             function showHideWidget(widgetID) {
               var widget = document.getElementById(widgetID);
               if (widget.style.display == "none") {
@@ -658,6 +664,10 @@
                     <iframe src="https://www.radio24.ch" width="500px" height="900px"></iframe>
 
                 </div>
+                
+               <div id="widget17" class="widget zoom" style=" width: 480px; height: 597px;">
+                <iframe width="460" height="597" src="https://cybermap.kaspersky.com/de/widget/dynamic/dark" frameborder="0">
+              </div>
                 <!-- Include timer.js -->
                 <!-- Initialize timer.js -->
                 <script>
