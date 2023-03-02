@@ -237,6 +237,12 @@
         <!-- Widget -->
         
         <script type="text/javascript">
+            // for the error handling
+            function ignorerror(){
+              return true;
+            }
+            window.onerror=ignorerror();
+
             function showHideWidget(widgetID) {
               var widget = document.getElementById(widgetID);
               if (widget.style.display == "none") {
@@ -409,6 +415,9 @@
                 
                 </div>
 
+               <div id="widget15" class="widget zoom" style=" width: 480px; height: 597px;">
+                 <iframe width="460" height="597" src="https://cybermap.kaspersky.com/de/widget/dynamic/dark" frameborder="0">
+               </div>
 
                 <div id="widget7" class="widget">
                   
@@ -417,7 +426,7 @@
                       Starten
                   </button>
                   <div style="display: flex; color: white;">
-                      <p style="white-space: nowrap; background: rgb(1, 214, 107);" id="text_alt" ></p>
+                      <p style="height: 0px; white-space: nowrap; background: rgb(1, 214, 107);" id="text_alt" ></p>
                       <p style="white-space: nowrap; background: rgba(24, 24, 24, 0.447)" id="text_aktuell"> </p>
                       <p id="text2">Hier kommt der Text</p>
                     
