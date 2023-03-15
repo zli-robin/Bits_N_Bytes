@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../css/explain_pages.css">
-        <script src="../../js/explain/filereader.js"></script>
+        <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
         <title>
             Vorlage
         </title>
@@ -21,8 +21,8 @@
                     <img id="hamburger" src="../../images/explains_img/hamburger.png" class="hamburger">
                     <div class="dropdown-content">
                             <a href="../explains.html">Back to Overview</a>
-                            <a href="#">Option 2</a>
-                            <a href="#">Option 3</a>
+                            <a id="GER">Deutsch</a>
+                            <a id="ENG">English</a>
                     </div>
                 </div>
                 <div></div>
@@ -30,7 +30,7 @@
         </div>
     </body>
 
-</html></header><div class="Content-Menu Content-Background">
+</html></header><div class="Content-Menu">
 <section>
     <div>
         <img src="../../images/explains_img/draganddrop-removebg-preview.png">
@@ -45,20 +45,37 @@
     </div>
 </section>
 <div id="MarkdownText">
-    PlaceHolder
+    <script>
+        document.getElementById('GER').addEventListener('click', function(){ change("de"), location.reload()});
+        document.getElementById('ENG').addEventListener('click', function(){ change("en"), location.reload()});
+
+        function change(lang) {
+            if(lang === "de") {
+                localStorage.setItem("lang", "german");
+            } else {
+                localStorage.setItem("lang", "english");
+            }
+        }
+        const filename = "Test Markdown.md";
+
+        if(localStorage.getItem("lang") === "german"){
+            console.log("checksout")
+            document.write("<zero-md src='../../Markdown/DE/" + filename + "'>")
+        } else {
+            console.log("meeep")
+            document.write("<zero-md src='../../Markdown/EN/" + filename + "'>")
+        }
+    </script>
+        <template>
+            <link rel="stylesheet" href="../../css/explain_pages.css" />
+          </template>
+        </zero-md>
+</div>
 </div>
 <script>
-    /*--------Which File should be displayed----------*/
-    const quelMarkdown = "Test Markdown.md"
-    /*--------Wo hin? für mehrere Files gleichzeitig--------*/
-    const placeid = "MarkdownText"
-    /*---------Call of function-------------*/
-    displayfile(quelMarkdown, placeid)
-</script></div><script>
 /* When the user clicks on the button,
       toggle between hiding and showing the dropdown content */
 let dropdownContent = document.querySelector('.dropdown-content');
-console.log(dropdownContent.style   )
 /*EVENT LISTENER FOR lOGO*/
 document.getElementById('banner').addEventListener('click', function () {
     location.href = "../index.html"
