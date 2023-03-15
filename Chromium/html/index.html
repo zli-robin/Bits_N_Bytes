@@ -226,113 +226,61 @@
         <!-- Background -->
 
         <!-- Widget -->
-        
-        <script type="text/javascript">
-            // for the error handling
-            function ignorerror(){
-              return true;
-            }
-            window.onerror=ignorerror();
+<script type="text/javascript">
+    // for the error handling
+    function ignorerror() {
+        return true;
+    }
+    window.onerror = ignorerror();
 
-            function showHideWidget(widgetID) {
-              var widget = document.getElementById(widgetID);
-              if (widget.style.display == "none") {
-                widget.style.display = "block";
-              } else {
-                widget.style.display = "none";
-              }
-            }
+    function showHideWidget(widgetID) {
+        var widget = document.getElementById(widgetID);
+        if (widget.style.display == "none") {
+            widget.style.display = "block";
+        } else {
+            widget.style.display = "none";
+        }
+    }
 
-            function PLAWidgets() {
-                widget1.style.display = "none";
-                widget2.style.display = "none";
-                widget3.style.display = "none";
-                widget4.style.display = "none";
-                widget5.style.display = "none";
-                widget6.style.display = "none";
-                widget7.style.display = "none";
-                widget8.style.display = "none";
-                widget9.style.display = "none";
-                widget10.style.display = "none";
-                widget11.style.display = "none";
-                widget12.style.display = "none";
-                widget13.style.display = "none";
-                widget14.style.display = "none";
-                widget15.style.display = "none";
-                widget16.style.display = "block";
-                widget17.style.display = "block";
-              
-            }
+    function PLAWidgets() {
+        for (var i = 1; i <= 15; i++) {
+            document.getElementById('widget' + i).style.display = 'none';
+        }
+    }
 
-            function APIWidget() {
-                widget1.style.display = "block";
-                widget2.style.display = "block";
-                widget3.style.display = "block";
-                widget4.style.display = "block";
-                widget5.style.display = "block";
-                widget6.style.display = "block";
-                widget7.style.display = "block";
-                widget8.style.display = "block";
-                widget9.style.display = "block";
-                widget10.style.display = "block";
-                widget11.style.display = "block";
-                widget12.style.display = "block";
-                widget13.style.display = "block";
-                widget14.style.display = "block";
-                widget15.style.display = "block";
-                widget16.style.display = "block";
-                widget17.style.display = "block";
-              
-            }
+    function APIWidget() {
+        for (var i = 1; i <= 15; i++) {
+            document.getElementById('widget' + i).style.display = 'block';
+        }
+    }
+</script>
 
-
-          </script>
-    
-    
-            <div class="uk-position-cover" id="widgetcontainer">
-    
-
-
-
-                <div id="widget1" class="widget zoom wrapper">
-                   
-                    <div class="task-input">
-                      <input type="text" placeholder="Add a new task">
-                    </div>
-                    <div class="controls">
-                      <div class="filters">
-                        <span class="active" id="all">All</span>
-                        <span id="pending">Pending</span>
-                        <span id="completed">Completed</span>
-                      </div>
-                      <button class="clear-btn">Clear All</button>
-                    </div>
-                    <ul class="task-box"></ul>
-              
-                  <script src="../js/index/todo.js"></script>
-              
-                </div>
-    
-                
-                <div id="widget2" class="widget zoom">
-    
-                  <iframe style="max-width:900px;max-height:900px;" src="https://uhrzeit123.de/vollbild#background=slideshow&showtitle=false&showdate=false&showtimeofday=true&title=Aktuelle%20Uhrzeit&widget=yes" frameborder=0></iframe>
-                </div>
-                
-    
-                <div id="widget3" class="widget zoom">
-                  
-                  <iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 596px"></iframe>
-    
-                </div>
-    
-    
-                <div id="widget4" class="widget zoom">
-    
-                  <iframe src="https://www.meteoblue.com/en/weather/maps/widget/obergrossegg_switzerland_11579273?windAnimation=0&windAnimation=1&gust=0&gust=1&satellite=0&satellite=1&cloudsAndPrecipitation=0&cloudsAndPrecipitation=1&temperature=0&temperature=1&sunshine=0&sunshine=1&extremeForecastIndex=0&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=9&autowidth=manu"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 270px"></iframe>
-                
-                </div>
-
+<div class="uk-position-cover" id="widgetcontainer">
+    <div id="widget1" class="widget zoom wrapper">
+        <div class="task-input">
+            <input type="text" placeholder="Add a new task">
+        </div>
+        <div class="controls">
+            <div class="filters">
+                <span class="active" id="all">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+            </div>
+            <button class="clear-btn">Clear All</button>
+        </div>
+        <ul class="task-box"></ul>
+        <script src="../js/todo.js"></script>
+    </div>
+    <div id="widget2" class="widget zoom">
+        <iframe style="max-width:900px;max-height:900px;" src="https://uhrzeit123.de/vollbild#background=slideshow&showtitle=false&showdate=false&showtimeofday=true&title=Aktuelle%20Uhrzeit&widget=yes" frameborder=0></iframe>
+    </div>
+    <div id="widget3" class="widget zoom">
+        <iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 596px"></iframe>
+    </div>
+    <div id="widget4" class="widget zoom">
+        <iframe src="https://www.meteoblue.com/en/weather/maps/widget/obergrossegg_switzerland_11579273?windAnimation=0&windAnimation=1&gust=0&gust=1&satellite=0&satellite=1&cloudsAndPrecipitation=0&cloudsAndPrecipitation=1&temperature=0&temperature=1&sunshine=0&sunshine=1&extremeForecastIndex=0&extremeForecastIndex=1&geoloc=fixed&tempunit=C&windunit=km%252Fh&lengthunit=metric&zoom=9&autowidth=manu" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 460px; height: 270px"></iframe>
+    </div>
+    <div id="widget5"
 
 
                     
@@ -572,87 +520,82 @@
 
 
                 <div id="widget12" class="widget">
+  <iframe src="http://localhost:8080/" frameborder="0" width="300px" height="300px"></iframe>
+</div>
 
-                  <iframe src="http://localhost:8080/" frameborder="0" width="300px" height="300px"></iframe>
+<div id="widget13" class="widget qrgenwrapper">
+  <header>
+    <h1>QR Code Generator</h1>
+  </header>
+  <div class="grgenform">
+    <input type="text" spellcheck="false" placeholder="Enter text or url">
+    <button>Generate QR Code</button>
+  </div>
+  <div class="qr-code">
+    <img src="" alt="qr-code">
+  </div>
+  <script>
+    const qrgenwrapper = document.querySelector(".qrgenwrapper"),
+      qrInput = qrgenwrapper.querySelector(".grgenform input"),
+      generateBtn = qrgenwrapper.querySelector(".grgenform button"),
+      qrImg = qrgenwrapper.querySelector(".qr-code img");
+    let preValue;
 
-                </div>
+    generateBtn.addEventListener("click", () => {
+      let qrValue = qrInput.value.trim();
+      if (!qrValue || preValue === qrValue) return;
+      preValue = qrValue;
+      generateBtn.innerText = "Generating QR Code...";
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}`;
+      qrImg.addEventListener("load", () => {
+        qrgenwrapper.classList.add("active");
+        generateBtn.innerText = "Generate QR Code";
+      });
+    });
 
+    qrInput.addEventListener("keyup", () => {
+      if (!qrInput.value.trim()) {
+        qrgenwrapper.classList.remove("active");
+        preValue = "";
+      }
+    });
+  </script>
+</div>
 
-
-                <div id="widget13" class="widget qrgenwrapper">                  
-                    <header>
-                      <h1>QR Code Generator</h1>
-                    </header>
-                    <div class="grgenform">
-                      <input type="text" spellcheck="false" placeholder="Enter text or url">
-                      <button>Generate QR Code</button>
-                    </div>
-                    <div class="qr-code">
-                      <img src="" alt="qr-code">
-                    </div>
-
-                    <script>
-                      const qrgenwrapper = document.querySelector(".qrgenwrapper"),
-                      qrInput = qrgenwrapper.querySelector(".grgenform input"),
-                      generateBtn = qrgenwrapper.querySelector(".grgenform button"),
-                      qrImg = qrgenwrapper.querySelector(".qr-code img");
-                      let preValue;
-                      
-                      generateBtn.addEventListener("click", () => {
-                          let qrValue = qrInput.value.trim();
-                          if(!qrValue || preValue === qrValue) return;
-                          preValue = qrValue;
-                          generateBtn.innerText = "Generating QR Code...";
-                          qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}`;
-                          qrImg.addEventListener("load", () => {
-                              qrgenwrapper.classList.add("active");
-                              generateBtn.innerText = "Generate QR Code";
-                          });
-                      });
-                      
-                      qrInput.addEventListener("keyup", () => {
-                          if(!qrInput.value.trim()) {
-                              qrgenwrapper.classList.remove("active");
-                              preValue = "";
-                          }
-                      });
-                  </script>
-                </div>
-
-                <div id="widget14" class="widget container disable">
-                    <h2>Image Editor</h2>
-                    <div class="wrapper">
-                        <div class="editor-panel">
-                            <div class="filter">
-                                <label class="title">Filters</label>
-                                <div class="options">
-                                    <button id="brightness" class="active">Brightness</button>
-                                    <button id="saturation">Saturation</button>
-                                    <button id="inversion">Inversion</button>
-                                    <button id="grayscale">Grayscale</button>
-                                </div>
-                                <div class="slider">
-                                    <div class="filter-info">
-                                        <p class="name">Brighteness</p>
-                                        <p class="value">100%</p>
-                                    </div>
-                                    <input type="range" value="100" min="0" max="200">
-                                </div>
-                            </div>
-                            <div class="rotate">
-                                <label class="title">Rotate & Flip</label>
-                                <div class="options">
-                                    <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
-                                    <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
-                                    <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
-                                    <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="preview-img">
-                            <img src="image-placeholder.svg" alt="preview-img">
-                        </div>
-                    </div>
+<div id="widget14" class="widget container disable">
+  <h2>Image Editor</h2>
+  <div class="wrapper">
+    <div class="editor-panel">
+      <div class="filter">
+        <label class="title">Filters</label>
+        <div class="options">
+          <button id="brightness" class="active">Brightness</button>
+          <button id="saturation">Saturation</button>
+          <button id="inversion">Inversion</button>
+          <button id="grayscale">Grayscale</button>
+        </div>
+        <div class="slider">
+          <div class="filter-info">
+            <p class="name">Brighteness</p>
+            <p class="value">100%</p>
+          </div>
+          <input type="range" value="100" min="0" max="200">
+        </div>
+      </div>
+      <div class="rotate">
+        <label class="title">Rotate &amp; Flip</label>
+        <div class="options">
+          <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+          <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+          <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+          <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="preview-img">
+      <img src="image-placeholder.svg" alt="preview-img">
+    </div>
+  </div>
 
                     <div class="controls">
                         <button class="reset-filter">Reset Filters</button>
