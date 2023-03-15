@@ -1,11 +1,11 @@
     /*General HTML Tags*/
     html {
-      height: window.innerHeight;
-      width: window.innerWidth;
+      height: 100vh;
+      width: 100vw;
       overflow: hidden;
       background-repeat: no-repeat;
       background-size: cover;
-    }
+  }
     /* Style for the button*/
     button {
       padding: 5px 10px;

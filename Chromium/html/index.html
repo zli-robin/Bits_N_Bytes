@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Bits N Bytes</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/uikit.min.css" />
-        <link rel="stylesheet" href="../css/uikit-img-style.css" />
-        <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/todo.css">
-        <link rel="stylesheet" href="../css/timer.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <link rel="stylesheet" href="../css/draw.css">
-        <link rel="stylesheet" href="../css/countdown.css">
-        <link rel="stylesheet" href="../css/txtfile.css">
-        <link rel="stylesheet" href="../css/rechner.css">
-        <link rel="stylesheet" href="../css/passwdgen.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-        <link rel="stylesheet" href="../css/qrgen.css">
-        <link rel="stylesheet" href="../css/rightclick.css">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <link rel="stylesheet" href="../css/imgeditor.css">
-        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-
-
-        <script src="../js/uikit.min.js"></script>
-        <script src="../js/uikit-icons.min.js"></script>
-        <script src="../js/uikit.js"></script>
-        <script src="../js/background.js"></script>
-        <script src="../js/draw.js" defer></script>
-        <script src="../js/timer.js" defer></script>
-        <script src="../js/tastatur.js" defer></script>
-        <script src="../js/countdown.js"></script>
-        <script src="../js/txtfile.js" defer></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script src="../js/rechner.js" defer></script>
-        <script src="../js/passwdgen.js" defer></script>
-        <script src="../js/qrgen.js" defer></script>
-      
-
-    </head>
+<head>
+    <title>Bits N Bytes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!------UIKIT LINKS START-------->
+    <script src="../js/uikit/uikit.min.js"></script>
+    <script src="../js/uikit/uikit-icons.min.js"></script>
+    <script src="../js/uikit/uikit.js"></script>
+    <link rel="stylesheet" href="../css/uikit/uikit.min.css" />
+    <!------UIKIT LINKS ENDE-------->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!--START Widget Scripts-->
+    <script src="../js/index/background.js"></script>
+    <script src="../js/index/draw.js" defer></script>
+    <script src="../js/index/timer.js" defer></script>
+    <script src="../js/index/tastatur.js" defer></script>
+    <script src="../js/index/countdown.js"></script>
+    <script src="../js/index/txtfile.js" defer></script>
+    <script src="../js/index/rechner.js" defer></script>
+    <script src="../js/index/passwdgen.js" defer></script>
+</head>
     <body>
-
+        <script>
+        // Check if user has visited site before
+        if (localStorage.getItem('visited') === null) {
+        console.log('Welcome to our site!');
+        alert("HI, welcome to the Dashboard | Press rightclick on the Dasboard Background to get a menu!")
+        // Set a "visited" flag in local storage
+        localStorage.setItem('visited', true);
+        } else {
+        console.log('Welcome back to our site!');
+        }
+        </script>
       <div class="clickwrapper">
         <div class="clickcontent">
           <ul class="menu">
@@ -176,11 +171,11 @@
                   <ul class="share-menu">
                       <li class="item" onClick="showHideWidget('widget15');">
                           <img src="../images/RadioIco.png" alt="">
-                          <span>Radio</span>
+                          <span>NRJ</span>
                       </li>
-                      <li class="item" onClick="showHideWidget('widget15');">
+                      <li class="item" onClick="showHideWidget('widget16');">
                           <img src="../images/RadioIco.png" alt="">
-                          <span>Radio</span>
+                          <span>Radio24</span>
                       </li>
                   </ul>
               </li>
@@ -214,25 +209,21 @@
               <span>Credits</span>
             </li>
           </div>
+          <div style="display: flex; margin-top: -5px; padding: 5px 12px;">
+            <li class="item" onClick="location.href='./explains.html'">
+              <p style="margin: 5px;">❓</p>
+              <span>How To</span>
+            </li>
+          </div>
         </div>
       </div>
   
   
-      <script src="../js/rightclick.js"></script>
-
-
-
-
-
-
+      <script src="../js/index/rightclick.js"></script>
 
         <!-- Background -->
         <img name="slide" width="100%" height="100%"/>
         <!-- Background -->
-
-
-
-
 
         <!-- Widget -->
         
@@ -268,6 +259,8 @@
                 widget13.style.display = "none";
                 widget14.style.display = "none";
                 widget15.style.display = "none";
+                widget16.style.display = "block";
+                widget17.style.display = "block";
               
             }
 
@@ -287,6 +280,8 @@
                 widget13.style.display = "block";
                 widget14.style.display = "block";
                 widget15.style.display = "block";
+                widget16.style.display = "block";
+                widget17.style.display = "block";
               
             }
 
@@ -314,7 +309,7 @@
                     </div>
                     <ul class="task-box"></ul>
               
-                  <script src="../js/todo.js"></script>
+                  <script src="../js/index/todo.js"></script>
               
                 </div>
     
@@ -415,8 +410,8 @@
                 
                 </div>
 
-               <div id="widget15" class="widget zoom" style=" width: 480px; height: 597px;">
-                 <iframe width="460" height="597" src="https://cybermap.kaspersky.com/de/widget/dynamic/dark" frameborder="0">
+               <div id="widget17" class="widget zoom" style=" width: 480px; height: 597px;">
+                   <iframe width="460" height="597" src="https://cybermap.kaspersky.com/de/widget/dynamic/dark" frameborder="0"></iframe>
                </div>
 
                 <div id="widget7" class="widget">
@@ -669,7 +664,7 @@
 
                 </div>
             
-                <script src="../js/imgeditor.js"></script>
+                <script src="../js/index/imgeditor.js"></script>
 
                 </div>
 
