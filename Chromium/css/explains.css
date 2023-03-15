@@ -10,8 +10,7 @@ body {
 }
 
 header {
-  background-color: grey;
-  text-align: center;
+  background-color: grey; 
 }
 
 .SectionTitel {
@@ -101,3 +100,4 @@ hr {
   margin-left: 10%;
   margin-right: 10%;
 }
+

@@ -1,47 +1,86 @@
-<!DOCTYPE html>
+<!DOCTYPE    html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/explain_pages.css">
-    <title>Vorlage</title>
-</head>
-<body>
-    <header>
-        <div
-          class="topnav">
-          <section>
-            <img
-              id="banner"
-              style="height: 90%; width: max-content;"
-              src="../../images/explains_img/LOGO-removebg-preview.png"></img>
-              <img
-              id="hamburger"
-              src="../../images/explains_img/hamburger.png"
-              style="height: 80px; width: 80px; display: -webkit-box; margin-left: auto; margin-top: 18px;">
-            <div>
-            </div>
-          </section>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/explain_pages.css">
+        <script src="../../js/explain/filereader.js"></script>
+        <title>
+            Vorlage
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <div class="topnav">
+                <section>
+                    <img id="banner" style="height: 90%; width: max-content;" src="../../images/explains_img/LOGO-removebg-preview.png"></img>
+                <div class="dropdown-menu">
+                    <img id="hamburger" src="../../images/explains_img/hamburger.png" class="hamburger">
+                    <div class="dropdown-content">
+                            <a href="../explains.html">Back to Overview</a>
+                            <a href="#">Option 2</a>
+                            <a href="#">Option 3</a>
+                    </div>
+                </div>
+                <div></div>
+            </section>
         </div>
-      </header>
-      <div class="Content-Menu Content-Background">
-            <section>
-            <div>
-                <img src="../../images/explains_img/draganddrop-removebg-preview.png">
-            </div>
-            <div>
-                <h2>Vorlage</h2>
-                <p>Eine Vorlage soll das aufsetzen neuer sachen erleichtern. !!! And dieser Stelle eine Kurze einleitung !!!</p>
-            </div>
-        </section>
-        <div class="MarkdownText">PlaceHolder</div>
+    </body>
+
+</html></header><div class="Content-Menu Content-Background">
+<section>
+    <div>
+        <img src="../../images/explains_img/draganddrop-removebg-preview.png">
+    </div>
+    <div>
+        <h2>
+            Vorlage
+        </h2>
+        <p>
+            Eine Vorlage soll das aufsetzen neuer sachen erleichtern. !!! And dieser eine einleitung!!!
+        </p>
+    </div>
+</section>
+<div id="MarkdownText">
+    PlaceHolder
 </div>
 <script>
-  /*EVENT LISTENER FOR lOGO*/
-  document.getElementById('banner').addEventListener('click', function(){ location.href="../index.html"});
-  /*EVENT LISTENER FOR HAMBURGER*/
-  document.getElementById('hamburger').addEventListener('click', function(){ location.href="../explains.html"});
+    /*--------Which File should be displayed----------*/
+    const quelMarkdown = "Test Markdown.md"
+    /*--------Wo hin? für mehrere Files gleichzeitig--------*/
+    const placeid = "MarkdownText"
+    /*---------Call of function-------------*/
+    displayfile(quelMarkdown, placeid)
+</script></div><script>
+/* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+let dropdownContent = document.querySelector('.dropdown-content');
+console.log(dropdownContent.style   )
+/*EVENT LISTENER FOR lOGO*/
+document.getElementById('banner').addEventListener('click', function () {
+    location.href = "../index.html"
+});
+/*EVENT LISTENER FOR HAMBURGER*/
+document.getElementById('hamburger').addEventListener('click', function() {
+    dropDown();
+}); 
+
+/*Dropdown*/
+let i = "now hidden";
+function dropDown() {
+    if (i == "now hidden") {
+        dropdownContent.style.display = 'block';
+        i = "now block";
+        console.log(i)
+    } else {
+        dropdownContent.style.display = 'none';
+        i = "now hidden";
+        console.log(i)
+    }
+}
 </script>
 </body>
 </html>
