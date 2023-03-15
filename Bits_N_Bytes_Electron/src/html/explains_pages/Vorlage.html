@@ -1,0 +1,103 @@
+<!DOCTYPE    html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/explain_pages.css">
+        <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+        <title>
+            Vorlage
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <div class="topnav">
+                <section>
+                    <img id="banner" style="height: 90%; width: max-content;" src="../../images/explains_img/LOGO-removebg-preview.png"></img>
+                <div class="dropdown-menu">
+                    <img id="hamburger" src="../../images/explains_img/hamburger.png" class="hamburger">
+                    <div class="dropdown-content">
+                            <a href="../explains.html">Back to Overview</a>
+                            <a id="GER">Deutsch</a>
+                            <a id="ENG">English</a>
+                    </div>
+                </div>
+                <div></div>
+            </section>
+        </div>
+    </body>
+
+</html></header><div class="Content-Menu">
+<section>
+    <div>
+        <img src="../../images/explains_img/draganddrop-removebg-preview.png">
+    </div>
+    <div>
+        <h2>
+            Vorlage
+        </h2>
+        <p>
+            Eine Vorlage soll das aufsetzen neuer sachen erleichtern. !!! And dieser eine einleitung!!!
+        </p>
+    </div>
+</section>
+<div id="MarkdownText">
+    <script>
+        document.getElementById('GER').addEventListener('click', function(){ change("de"), location.reload()});
+        document.getElementById('ENG').addEventListener('click', function(){ change("en"), location.reload()});
+
+        function change(lang) {
+            if(lang === "de") {
+                localStorage.setItem("lang", "german");
+            } else {
+                localStorage.setItem("lang", "english");
+            }
+        }
+        const filename = "Test Markdown.md";
+
+        if(localStorage.getItem("lang") === "german"){
+            console.log("checksout")
+            document.write("<zero-md src='../../Markdown/DE/" + filename + "'>")
+        } else {
+            console.log("meeep")
+            document.write("<zero-md src='../../Markdown/EN/" + filename + "'>")
+        }
+    </script>
+        <template>
+            <link rel="stylesheet" href="../../css/explain_pages.css" />
+          </template>
+        </zero-md>
+</div>
+</div>
+<script>
+/* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+let dropdownContent = document.querySelector('.dropdown-content');
+/*EVENT LISTENER FOR lOGO*/
+document.getElementById('banner').addEventListener('click', function () {
+    location.href = "../index.html"
+});
+/*EVENT LISTENER FOR HAMBURGER*/
+document.getElementById('hamburger').addEventListener('click', function() {
+    dropDown();
+}); 
+
+/*Dropdown*/
+let i = "now hidden";
+function dropDown() {
+    if (i == "now hidden") {
+        dropdownContent.style.display = 'block';
+        i = "now block";
+        console.log(i)
+    } else {
+        dropdownContent.style.display = 'none';
+        i = "now hidden";
+        console.log(i)
+    }
+}
+</script>
+</body>
+</html>
