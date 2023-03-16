@@ -2,9 +2,9 @@ var index = 0;
 var images = [];
 var time = 3000;
 
-images[0] = '../images/Lofi2.gif';
-images[1] = '../images/Lofi1.gif';
-images[2] = '../images/Lofi3.webp';
+images[0] = '../../images/Lofi1.gif';
+images[1] = '../../images/Lofi1.gif';
+images[2] = '../../images/Lofi1.gif';
 
 function changeImage(){
  document.slide.src = images[index];
