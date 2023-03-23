@@ -1,5 +1,22 @@
 # 🇩🇪 Deutsch
 
+## Inhalt DE
+
+- [🇩🇪 Deutsch](#deutsch)
+  - [Inhalt DE](#inhalt-de)
+  - [Grundlagen](#grundlagen)
+  - [Installation](#installation)
+    - [schnell start](#schnell-start)
+    - [Für Experimentierfreudige (Optional)](#für-experimentierfreudige-optional)
+  - [Datei Übertragung (Optional)](#datei-übertragung-optional)
+- [🇬🇧 Englisch](#-englisch)
+  - [Content ENG](#content-eng)
+  - [Basics](#basics)
+  - [installation](#installation-1)
+    - [quick start](#quick-start)
+    - [For those who like to experiment (Optional)](#for-those-who-like-to-experiment-optional)
+  - [File Transfer (Optional)](#file-transfer-optional)
+
 ## Grundlagen
 
 Um das Dashboard zu nutzen, gehen Sie bitte wie folgt vor:
@@ -91,6 +108,23 @@ In diesem fall können sie nun mit dem Mobile gerät oder einem anderen Client m
 ---
 
 # 🇬🇧 Englisch
+
+## Content ENG
+
+- [🇩🇪 Deutsch](#deutsch)
+  - [Inhalt DE](#inhalt-de)
+  - [Grundlagen](#grundlagen)
+  - [Installation](#installation)
+    - [schnell start](#schnell-start)
+    - [Für Experimentierfreudige (Optional)](#für-experimentierfreudige-optional)
+  - [Datei Übertragung (Optional)](#datei-übertragung-optional)
+- [🇬🇧 Englisch](#-englisch)
+  - [Content ENG](#content-eng)
+  - [Basics](#basics)
+  - [installation](#installation-1)
+    - [quick start](#quick-start)
+    - [For those who like to experiment (Optional)](#for-those-who-like-to-experiment-optional)
+  - [File Transfer (Optional)](#file-transfer-optional)
 
 ## Basics
 
