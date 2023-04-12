@@ -15,6 +15,7 @@
   <link
     rel="stylesheet"
     href="../css/explains.css">
+  <script src="../js/explains/explains.js"></script>
   <title>Bits N Bytes | Explain</title>
 
       <!-- Google tag (gtag.js) -->
@@ -35,24 +36,27 @@
       </div>
   </header>
   <div class="movies">
-  <h2 class="SectionTitel">Blockbuster</h2>
+  <h2 class="SectionTitel">Start</h2>
   <hr>
   <section
     class="cards-container">
     <div
       class="card"
-      id="Widget1">
+      onmouseover="startHoverTimer(event)" onmouseout="resetHoverTimer(event)"
+      id="widget1">
       <img
-        src="../images/explains_img/Airdrop.png"
+        src="../images/explains_img/Install.png"
         alt="Avatar">
       <div
         class="card-text-container">
         <h4>
-          <b>Airdrop feature</b>
+          <b>Installation</b>
         </h4>
-        <p
-          style="font-size: auto;">
-        Wie kannst du das Airdrop feature aktivieren?
+        <p>
+          Wie installierst und setzt du das Dashboard auf?
+        </p>
+        <p>
+          How to install and setup the Dasboard?
         </p>
         <p
           style="text-align: center;">
@@ -62,7 +66,8 @@
     </div>
     <div  
       class="card"
-      id="Widget2">
+      onmouseover="startHoverTimer(event)" onmouseout="resetHoverTimer(event)"
+      id="widget2">
       <img
         src="../images/explains_img/draganddrop-removebg-preview.png"
         alt="Avatar">
@@ -76,6 +81,7 @@
     </div>
     <div
     class="card"
+    onmouseover="startHoverTimer(event)" onmouseout="resetHoverTimer(event)"
     id="widget3">
     <img
       src="../images/explains_img/draganddrop-removebg-preview.png"
@@ -88,77 +94,6 @@
       <p>Was ist Drag & Drop und wie haben wir das hinbekommen?</p>
     </div>
   </div>
-  <div
-  class="card"
-  id="Widget4">
-  <img
-    src="../images/explains_img/draganddrop-removebg-preview.png"
-    alt="Avatar">
-  <div
-    class="card-text-container">
-    <h4>
-      <b>Drag & Drop</b>
-    </h4>
-    <p>Was ist Drag & Drop und wie haben wir das hinbekommen?</p>
-  </div>
-</div>
-<div
-      class="card"
-      id="Widget5">
-      <img
-        src="../images/explains_img/draganddrop-removebg-preview.png"
-        alt="Avatar">
-      <div
-        class="card-text-container">
-        <h4>
-          <b>Drag & Drop</b>
-        </h4>
-        <p>Was ist Drag & Drop und wie haben wir das hinbekommen?</p>
-      </div>
-    </div>
-    <div
-      class="card"
-      id="Widget6">
-      <img
-        src="../images/explains_img/draganddrop-removebg-preview.png"
-        alt="Avatar">
-      <div
-        class="card-text-container">
-        <h4>
-          <b>Drag & Drop</b>
-        </h4>
-        <p>Was ist Drag & Drop und wie haben wir das hinbekommen?</p>
-      </div>
-    </div>
-    <div
-      class="card"
-      id="Widget7">
-      <img
-        src="../images/explains_img/draganddrop-removebg-preview.png"
-        alt="Avatar">
-      <div
-        class="card-text-container">
-        <h4>
-          <b>Drag & Drop</b>
-        </h4>
-        <p>Was ist Drag & Drop und wie haben wir das hinbekommen?</p>
-      </div>
-    </div>
-    <div
-      class="card"
-      id="Widget8">
-      <img
-        src="../images/explains_img/draganddrop-removebg-preview.png"
-        alt="Avatar">
-      <div
-        class="card-text-container">
-        <h4>
-          <b>Drag & Drop</b>
-        </h4>
-        <p>Was ist Drag & Drop und wie haben wir das hinbekommen?</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <div class="games">
@@ -168,7 +103,7 @@
     class="cards-container">
     <div
       class="card"
-      id="Widget9">
+      id="widget9">
       <img
         src="../images/explains_img/Airdrop.png"
         alt="Avatar">
@@ -189,7 +124,7 @@
     </div>
     <div
       class="card"
-      id="Widget10">
+      id="widget10">
       <img
         src="../images/explains_img/draganddrop-removebg-preview.png"
         alt="Avatar">
@@ -203,7 +138,7 @@
     </div>
     <div
     class="card"
-    id="Widget11">
+    id="widget11">
     <img
       src="../images/explains_img/draganddrop-removebg-preview.png"
       alt="Avatar">
@@ -217,7 +152,7 @@
   </div>
   <div
   class="card"
-  id="Widget12">
+  id="widget12">
   <img
     src="../images/explains_img/draganddrop-removebg-preview.png"
     alt="Avatar">
@@ -231,7 +166,7 @@
 </div>
 <div
       class="card"
-      id="Widget13">
+      id="widget13">
       <img
         src="../images/explains_img/draganddrop-removebg-preview.png"
         alt="Avatar">
@@ -245,7 +180,7 @@
     </div>
     <div
       class="card"
-      id="Widget14">
+      id="widget14">
       <img
         src="../images/explains_img/draganddrop-removebg-preview.png"
         alt="Avatar">
@@ -259,7 +194,7 @@
     </div>
     <div
       class="card"
-      id="Widget15">
+      id="widget15">
       <img
         src="../images/explains_img/draganddrop-removebg-preview.png"
         alt="Avatar">
@@ -273,7 +208,7 @@
     </div>
     <div
       class="card"
-      id="Widget16">
+      id="widget16">
       <img
         src="../images/explains_img/draganddrop-removebg-preview.png"
         alt="Avatar">
@@ -287,17 +222,15 @@
     </div>
   </section>
   <script>
-    /*CHANGES LANGUAGE*/
-      
     /*EVENT LISTENERS FOR lOGO*/
-    document.getElementById('banner').addEventListener('click', function(){ location.href="./index.html"});
-    /*EVENT LISTENERS FOR WIDGETS*/
-    document.getElementById('Widget1').addEventListener('click', function(){ location.href="./explains_pages/Airdrop.html"});
-    document.getElementById('Widget2').addEventListener('click', function(){ location.href="./explains_pages/Vorlage.html"});
-    document.getElementById('Widget3').addEventListener('click', function(){ location.href="/Site1"});
-    document.getElementById('Widget4').addEventListener('click', function(){ location.href="/Site1"});
-    document.getElementById('Widget5').addEventListener('click', function(){ location.href="/Site1"});
-    document.getElementById('Widget6').addEventListener('click', function(){ location.href="/Site1"});
+    document.getElementById('banner').addEventListener('click', () =>{ location.href="./index.html"});
+    /*EVENT LISTENERS FOR widgetS*/
+    document.getElementById('widget1').addEventListener('click', () =>{ location.href="./explains_pages/Installation.html"});
+    document.getElementById('widget2').addEventListener('click', () =>{ location.href="./explains_pages/Vorlage.html"});
+    document.getElementById('widget3').addEventListener('click', () =>{ location.href="/Site1"});
+    document.getElementById('widget4').addEventListener('click', () =>{ location.href="/Site1"});
+    document.getElementById('widget5').addEventListener('click', () =>{ location.href="/Site1"});
+    document.getElementById('widget6').addEventListener('click', () =>{ location.href="/Site1"});
   </script>
   </script>
   <footer>
