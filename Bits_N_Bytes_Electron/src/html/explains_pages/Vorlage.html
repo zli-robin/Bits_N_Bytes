@@ -72,32 +72,5 @@
                     </div>
                 </div>
         </main>
-        <script>
-                /* When the user clicks on the button,
-                    toggle between hiding and showing the dropdown content */
-                let dropdownContent = document.querySelector('.dropdown-content');
-                /*EVENT LISTENER FOR lOGO*/
-                document.getElementById('banner').addEventListener('click', function () {
-                    location.href = "../index.html"
-                });
-                /*EVENT LISTENER FOR HAMBURGER*/
-                document.getElementById('hamburger').addEventListener('click', function() {
-                    dropDown();
-                }); 
-
-                /*Dropdown*/
-                let i = "now hidden";
-                function dropDown() {
-                    if (i == "now hidden") {
-                        dropdownContent.style.display = 'block';
-                        i = "now block";
-                        console.log(i)
-                    } else {
-                        dropdownContent.style.display = 'none';
-                        i = "now hidden";
-                        console.log(i)
-                    }
-                }
-        </script>
     </body>
 </html>
