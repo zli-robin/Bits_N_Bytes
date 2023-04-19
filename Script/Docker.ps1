@@ -10,3 +10,4 @@ Read-Host "Wenn Docker Desktop Installer heruntergeladen ist, drücke Enter"
 # Führe die beiden Befehle aus
 Start-Process -Wait "Docker Desktop Installer.exe" -ArgumentList "install"
 wsl --install
+echo Done!
