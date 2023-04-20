@@ -4,7 +4,7 @@ var time = 3000;
 
 images[0] = './images/Lofi1.gif';
 images[1] = './images/Lofi2.gif';
-images[2] = './images/Lofi3.gif';
+images[2] = './images/Lofi3.webp';
 /**
  *  Für die oberen File Pfade gehen wir vom HTML aus, da dieses JavaScript nur den src Attribut ändert und somit das HTML nach dem Image sucht.
  *  For the upper file paths we start from the HTML, because this JavaScript only changes the src attribute and thus the HTML searches for the image.
