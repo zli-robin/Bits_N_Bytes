@@ -1,119 +1,75 @@
+const lengthSlider = document.querySelector(".pass-length input"),
+options = document.querySelectorAll(".option input"),
+copyIcon = document.querySelector(".input-box span"),
+passwordInput = document.querySelector(".input-box input"),
+passIndicator = document.querySelector(".pass-indicator"),
+generateBtn = document.querySelector(".generate-btn");
 
-const fileInput = document.querySelector(".file-input"),
-filterOptions = document.querySelectorAll(".filter button"),
-filterName = document.querySelector(".filter-info .name"),
-filterValue = document.querySelector(".filter-info .value"),
-filterSlider = document.querySelector(".slider input"),
-rotateOptions = document.querySelectorAll(".rotate button"),
-previewImg = document.querySelector(".preview-img img"),
-resetFilterBtn = document.querySelector(".reset-filter"),
-chooseImgBtn = document.querySelector(".choose-img"),
-saveImgBtn = document.querySelector(".save-img");
-
-let brightness = "100", saturation = "100", inversion = "0", grayscale = "0";
-let rotate = 0, flipHorizontal = 1, flipVertical = 1;
-
-const loadImage = () => {
-    let file = fileInput.files[0];
-    if(!file) return;
-    previewImg.src = URL.createObjectURL(file);
-    previewImg.addEventListener("load", () => {
-        resetFilterBtn.click();
-        document.querySelector(".container").classList.remove("disable");
-    });
+const characters = { // object of letters, numbers & symbols
+    lowercase: "abcdefghijklmnopqrstuvwxyz",
+    uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    numbers: "0123456789",
+    symbols: "^!$%&|[](){}:;.,*+-#@<>~"
 }
 
-const applyFilter = () => {
-    previewImg.style.transform = `rotate(${rotate}deg) scale(${flipHorizontal}, ${flipVertical})`;
-    previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
-}
+const generatePassword = () => {
+    let staticPassword = "",
+    randomPassword = "",
+    excludeDuplicate = false,
+    passLength = lengthSlider.value;
 
-filterOptions.forEach(option => {
-    option.addEventListener("click", () => {
-        document.querySelector(".active").classList.remove("active");
-        option.classList.add("active");
-        filterName.innerText = option.innerText;
-
-        if(option.id === "brightness") {
-            filterSlider.max = "200";
-            filterSlider.value = brightness;
-            filterValue.innerText = `${brightness}%`;
-        } else if(option.id === "saturation") {
-            filterSlider.max = "200";
-            filterSlider.value = saturation;
-            filterValue.innerText = `${saturation}%`
-        } else if(option.id === "inversion") {
-            filterSlider.max = "100";
-            filterSlider.value = inversion;
-            filterValue.innerText = `${inversion}%`;
-        } else {
-            filterSlider.max = "100";
-            filterSlider.value = grayscale;
-            filterValue.innerText = `${grayscale}%`;
+    options.forEach(option => { // looping through each option's checkbox
+        if(option.checked) { // if checkbox is checked
+            // if checkbox id isn't exc-duplicate && spaces
+            if(option.id !== "exc-duplicate" && option.id !== "spaces") {
+                // adding particular key value from character object to staticPassword
+                staticPassword += characters[option.id];
+            } else if(option.id === "spaces") { // if checkbox id is spaces
+                staticPassword += `  ${staticPassword}  `; // adding space at the beginning & end of staticPassword
+            } else { // else pass true value to excludeDuplicate
+                excludeDuplicate = true;
+            }
         }
     });
-});
 
-const updateFilter = () => {
-    filterValue.innerText = `${filterSlider.value}%`;
-    const selectedFilter = document.querySelector(".filter .active");
-
-    if(selectedFilter.id === "brightness") {
-        brightness = filterSlider.value;
-    } else if(selectedFilter.id === "saturation") {
-        saturation = filterSlider.value;
-    } else if(selectedFilter.id === "inversion") {
-        inversion = filterSlider.value;
-    } else {
-        grayscale = filterSlider.value;
-    }
-    applyFilter();
-}
-
-rotateOptions.forEach(option => {
-    option.addEventListener("click", () => {
-        if(option.id === "left") {
-            rotate -= 90;
-        } else if(option.id === "right") {
-            rotate += 90;
-        } else if(option.id === "horizontal") {
-            flipHorizontal = flipHorizontal === 1 ? -1 : 1;
-        } else {
-            flipVertical = flipVertical === 1 ? -1 : 1;
+    for (let i = 0; i < passLength; i++) {
+        // getting random character from the static password
+        let randomChar = staticPassword[Math.floor(Math.random() * staticPassword.length)];
+        if(excludeDuplicate) { // if excludeDuplicate is true
+            // if randomPassword doesn't contains the current random character or randomChar is equal 
+            // to space " " then add random character to randomPassword else decrement i by -1
+            !randomPassword.includes(randomChar) || randomChar == " " ? randomPassword += randomChar : i--;
+        } else { // else add random character to randomPassword
+            randomPassword += randomChar;
         }
-        applyFilter();
-    });
-});
-
-const resetFilter = () => {
-    brightness = "100"; saturation = "100"; inversion = "0"; grayscale = "0";
-    rotate = 0; flipHorizontal = 1; flipVertical = 1;
-    filterOptions[0].click();
-    applyFilter();
-}
-
-const saveImage = () => {
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    canvas.width = previewImg.naturalWidth;
-    canvas.height = previewImg.naturalHeight;
-    
-    ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
-    ctx.translate(canvas.width / 2, canvas.height / 2);
-    if(rotate !== 0) {
-        ctx.rotate(rotate * Math.PI / 180);
     }
-    ctx.scale(flipHorizontal, flipVertical);
-    ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
-    
-    const link = document.createElement("a");
-    link.download = "image.jpg";
-    link.href = canvas.toDataURL();
-    link.click();
+    passwordInput.value = randomPassword; // passing randomPassword to passwordInput value
 }
 
-filterSlider.addEventListener("input", updateFilter);
-resetFilterBtn.addEventListener("click", resetFilter);
-saveImgBtn.addEventListener("click", saveImage);
-fileInput.addEventListener("change", loadImage);
-chooseImgBtn.addEventListener("click", () => fileInput.click());
+const upadatePassIndicator = () => {
+    // if lengthSlider value is less than 8 then pass "weak" as passIndicator id else if lengthSlider 
+    // value is less than 16 then pass "medium" as id else pass "strong" as id
+    passIndicator.id = lengthSlider.value <= 8 ? "weak" : lengthSlider.value <= 16 ? "medium" : "strong";
+}
+
+const updateSlider = () => {
+    // passing slider value as counter text
+    document.querySelector(".pass-length span").innerText = lengthSlider.value;
+    generatePassword();
+    upadatePassIndicator();
+}
+updateSlider();
+
+const copyPassword = () => {
+    navigator.clipboard.writeText(passwordInput.value); // copying random password
+    copyIcon.innerText = "check"; // changing copy icon to tick
+    copyIcon.style.color = "#4285F4";
+    setTimeout(() => { // after 1500 ms, changing tick icon back to copy
+        copyIcon.innerText = "copy_all";
+        copyIcon.style.color = "#707070";
+    }, 1500);
+}
+
+copyIcon.addEventListener("click", copyPassword);
+lengthSlider.addEventListener("input", updateSlider);
+generateBtn.addEventListener("click", generatePassword);

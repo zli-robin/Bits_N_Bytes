@@ -257,18 +257,20 @@
 <div class="uk-position-cover" id="widgetcontainer">
     <div id="widget1" class="widget zoom wrapper">
         <div class="task-input">
-            <input type="text" placeholder="Add a new task">
+          <input type="text" placeholder="Add a new task">
         </div>
         <div class="controls">
-            <div class="filters">
-                <span class="active" id="all">All</span>
-                <span id="pending">Pending</span>
-                <span id="completed">Completed</span>
-            </div>
-            <button class="clear-btn">Clear All</button>
+          <div class="filters">
+            <span class="active" id="all">All</span>
+            <span id="pending">Pending</span>
+            <span id="completed">Completed</span>
+          </div>
+          <button class="clear-btn">Clear All</button>
         </div>
         <ul class="task-box"></ul>
-        <script src="./js/todo.js"></script>
+      </div>
+      <script src="js/index/todo.js"></script>
+  
     </div>
     <div id="widget2" class="widget zoom">
         <iframe style="max-width:900px;max-height:900px;" src="https://uhrzeit123.de/vollbild#background=slideshow&showtitle=false&showdate=false&showtimeofday=true&title=Aktuelle%20Uhrzeit&widget=yes" frameborder=0></iframe>
@@ -364,10 +366,10 @@
                 
                 </div>
 
-               <div id="widget17" class="widget zoom" style=" width: 480px; height: 597px;">
+              <!-- <div id="widget17" class="widget zoom" style=" width: 480px; height: 597px;">
                    <iframe width="460" height="597" src="https://cybermap.kaspersky.com/de/widget/dynamic/dark" frameborder="0"></iframe>
                </div>
-
+              -->
                 <div id="widget7" class="widget">
                   
                   <textarea name="Text1" cols="40" rows="5" placeholder="Dein Text zum tippen" id="input_text"></textarea>
@@ -447,7 +449,7 @@
                 </div>
                 </div>
 
-                <div id="widget10" class="widget wrapper">
+     <!--           <div id="widget10" class="widget wrapper">
                     <textarea spellcheck="false" placeholder="Enter something to save" required>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text.</textarea>
                     <div class="file-options">
                       <div class="option file-name">
@@ -470,13 +472,11 @@
                     </div>
                     <button class="save-btn" type="button">Save As Text File</button>
                   </div>
-
-
+                -->
                 <div id="widget11" class="widget">
-            
-                  <div class="passgencontainer">
+                  <div class="container">
                     <h2>Password Generator</h2>
-                    <div class="passgenwrapper">
+                    <div class="wrapper">
                       <div class="input-box">
                         <input type="text" disabled>
                         <span class="material-symbols-rounded">copy_all</span>
@@ -521,9 +521,9 @@
                       <button class="generate-btn">Generate Password</button>
                     </div>
                   </div>
+                  <script src="js/index/imgeditor.js"></script>
 
                 </div>
-
 
                 <div id="widget12" class="widget">
   <iframe src="http://localhost:8080/" frameborder="0" width="300px" height="300px"></iframe>
@@ -572,50 +572,48 @@
   <h2>Image Editor</h2>
   <div class="wrapper">
     <div class="editor-panel">
-      <div class="filter">
-        <label class="title">Filters</label>
-        <div class="options">
-          <button id="brightness" class="active">Brightness</button>
-          <button id="saturation">Saturation</button>
-          <button id="inversion">Inversion</button>
-          <button id="grayscale">Grayscale</button>
+        <div class="filter">
+            <label class="title">Filters</label>
+            <div class="options">
+                <button id="brightness" class="active">Brightness</button>
+                <button id="saturation">Saturation</button>
+                <button id="inversion">Inversion</button>
+                <button id="grayscale">Grayscale</button>
+            </div>
+            <div class="slider">
+                <div class="filter-info">
+                    <p class="name">Brighteness</p>
+                    <p class="value">100%</p>
+                </div>
+                <input type="range" value="100" min="0" max="200">
+            </div>
         </div>
-        <div class="slider">
-          <div class="filter-info">
-            <p class="name">Brighteness</p>
-            <p class="value">100%</p>
-          </div>
-          <input type="range" value="100" min="0" max="200">
+        <div class="rotate">
+            <label class="title">Rotate & Flip</label>
+            <div class="options">
+                <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+            </div>
         </div>
-      </div>
-      <div class="rotate">
-        <label class="title">Rotate &amp; Flip</label>
-        <div class="options">
-          <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
-          <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
-          <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
-          <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
-        </div>
-      </div>
     </div>
     <div class="preview-img">
-      <img src="image-placeholder.svg" alt="preview-img">
+        <img src="images/imgeditor.png" alt="preview-img">
     </div>
-  </div>
+</div>
+<div class="controls">
+    <button class="reset-filter">Reset Filters</button>
+    <div class="row">
+        <input type="file" class="file-input" accept="image/*" hidden>
+        <button class="choose-img">Choose Image</button>
+        <button class="save-img">Save Image</button>
+    </div>
+</div>
+</div>
+<script src="js/index/imgeditor.js"></script>
 
-                    <div class="controls">
-                        <button class="reset-filter">Reset Filters</button>
-                        <div class="row">
-                            <input type="file" class="file-input" accept="image/*" hidden>
-                            <button class="choose-img">Choose Image</button>
-                            <button class="save-img">Save Image</button>
-                        </div>
-
-                </div>
-            
-                <script src="./js/index/imgeditor.js"></script>
-
-                </div>
+</div>
 
                 <div id="widget15" class="widget zoom wrapper">
 
