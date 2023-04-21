@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Code-Editor</title>
+	<style>
+		#editor, #preview {
+			display: inline-block;
+			width: 45%;
+			height: 300px;
+			vertical-align: top;
+			padding: 5px;
+		}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.25.2/min/vs/loader.js"></script>
+	<script>
+		require.config({ paths: { 'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.25.2/min/vs' }});
+	</script>
+    <script>
+        require(['vs/editor/editor.main'], function() {
+            var editor = monaco.editor.create(document.getElementById('editor'), {
+                value: '',
+                language: 'javascript'
+            });
+        
+            var preview = document.getElementById('preview');
+        
+            function updatePreview() {
+                var code = editor.getValue();
+                preview.innerHTML = '';
+                var iframe = document.createElement('iframe');
+                iframe.srcdoc = '<html><head><script>' + code + '</script></head><body></body></html>';
+                preview.appendChild(iframe);
+            }
+        
+            editor.onDidChangeModelContent(function() {
+                updatePreview();
+            });
+        
+            updatePreview();
+        });
+        
+    </script>
+</head>
+<body>
+	<h1>Code-Editor</h1>
+	<div id="editor"></div>
+	<div id="preview"></div>
+	<script src="javascript.js"></script>
+</body>
+</html>
