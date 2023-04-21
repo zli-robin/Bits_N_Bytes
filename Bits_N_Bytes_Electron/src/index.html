@@ -398,6 +398,13 @@
           </button>
         </div>
       </div>
+      <div id="widget11" class="widget">
+        <iframe
+        style="width: 470px; height: 550px"
+        src="./html/widgets/passwordGenerator/passwordGenerator.html"
+        frameborder="0"
+      ></iframe>
+      </div>
 
       <div
         id="widget17"
@@ -590,56 +597,6 @@ Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text. Lorem Ipsum 
         <button class="save-btn" type="button">Save As Text File</button>
       </div>
 
-      <div id="widget11" class="widget">
-        <div class="passgencontainer">
-          <h2>Password Generator</h2>
-          <div class="passgenwrapper">
-            <div class="input-box">
-              <input type="text" disabled />
-              <span class="material-symbols-rounded">copy_all</span>
-            </div>
-            <div class="pass-indicator"></div>
-            <div class="pass-length">
-              <div class="details">
-                <label class="title">Password Length</label>
-                <span></span>
-              </div>
-              <input type="range" min="1" max="30" value="15" step="1" />
-            </div>
-            <div class="pass-settings">
-              <label class="title">Password Settings</label>
-              <ul class="options">
-                <li class="option">
-                  <input type="checkbox" id="lowercase" checked />
-                  <label for="lowercase">Lowercase (a-z)</label>
-                </li>
-                <li class="option">
-                  <input type="checkbox" id="uppercase" />
-                  <label for="uppercase">Uppercase (A-Z)</label>
-                </li>
-                <li class="option">
-                  <input type="checkbox" id="numbers" />
-                  <label for="numbers">Numbers (0-9)</label>
-                </li>
-                <li class="option">
-                  <input type="checkbox" id="symbols" />
-                  <label for="symbols">Symbols (!-$^+)</label>
-                </li>
-                <li class="option">
-                  <input type="checkbox" id="exc-duplicate" />
-                  <label for="exc-duplicate">Exclude Duplicate</label>
-                </li>
-                <li class="option">
-                  <input type="checkbox" id="spaces" />
-                  <label for="spaces">Include Spaces</label>
-                </li>
-              </ul>
-            </div>
-            <button class="generate-btn">Generate Password</button>
-          </div>
-        </div>
-      </div>
-
       <div id="widget12" class="widget">
         <iframe
           src="http://localhost:8080/"
@@ -752,18 +709,6 @@ Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text. Lorem Ipsum 
       </div>
 
       <!--------------------------------START POPUP----------------------------------->
-      <script>
-        // Check if user has visited site before
-        if (localStorage.getItem("visited") === null) {
-          console.log("Welcome to our site!");
-          // Set a "visited" flag in local storage
-          localStorage.setItem("visited", true);
-        } else {
-          var card1 = document.getElementById("card1");
-          console.log("Welcome back to our site!");
-          card1.style.display = "flex";
-        }
-      </script>
       <div id="card1" class="card" style="display: hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -963,6 +908,18 @@ Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text. Lorem Ipsum 
           <div class="cardbutton button-primary">Do it!</div>
         </div>
       </div>
+      <script>
+        // Check if user has visited site before
+        if (localStorage.getItem("visited") === null) {
+          console.log("Welcome to our site!");
+          // Set a "visited" flag in local storage
+          localStorage.setItem("visited", true);
+        } else {
+          var card1 = document.getElementById("card1");
+          console.log("Welcome back to our site!");
+          card1.style.display = "flex";
+        }
+      </script>
       <!--------------------------------END POPUP----------------------------------->
 
       <!-- Include timer.js -->

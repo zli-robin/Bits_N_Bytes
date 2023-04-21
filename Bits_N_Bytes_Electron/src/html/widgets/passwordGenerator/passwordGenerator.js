@@ -1,9 +1,9 @@
 const lengthSlider = document.querySelector(".pass-length input"),
 options = document.querySelectorAll(".option input"),
 copyIcon = document.querySelector(".input-box span"),
-passwordInput = document.querySelector(".input-box input"),
+passwordInput = document.querySelector("#passwordDisplay"),
 passIndicator = document.querySelector(".pass-indicator"),
-generateBtn = document.querySelector(".generate-btn");
+generateBtn = document.querySelector("#generate-btn");
 
 const characters = { // object of letters, numbers & symbols
     lowercase: "abcdefghijklmnopqrstuvwxyz",
@@ -72,4 +72,4 @@ const copyPassword = () => {
 
 copyIcon.addEventListener("click", copyPassword);
 lengthSlider.addEventListener("input", updateSlider);
-generateBtn.addEventListener("click", generatePassword);
+generateBtn.addEventListener("mouseup", generatePassword);
