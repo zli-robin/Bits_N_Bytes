@@ -242,15 +242,17 @@
       transition: all 0.3s ease;
     }
     #widget13 {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+      cursor:all-scroll;
       display: none;
       position: absolute;
       top: 1%;
       left: 1%;
       width: fit-content;
       height: fit-content;
-      max-height: 500px;
       background-color: rgba(255, 255, 255, 0.607);
-      border: 1px solid #000;
       visibility: visible;
       opacity: 1;
       z-index: 1;
@@ -258,14 +260,17 @@
     }
 
     #widget14 {
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid black;
+      cursor:all-scroll;
       display: none;
       position: absolute;
-      top: 6%;
-      left: 11%;
+      top: 1%;
+      left: 1%;
       width: fit-content;
       height: fit-content;
       background-color: rgba(255, 255, 255, 0.607);
-      border: 1px solid #000;
       visibility: visible;
       opacity: 1;
       z-index: 1;
