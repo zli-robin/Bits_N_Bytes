@@ -1,15 +1,15 @@
 const contextMenu = document.querySelector(".clickwrapper"),
-shareMenu = contextMenu.querySelector(".share-menu");
+    shareMenu = contextMenu.querySelector(".share-menu");
 
 window.addEventListener("contextmenu", e => {
     e.preventDefault();
     let x = e.offsetX, y = e.offsetY,
-    winWidth = window.innerWidth,
-    winHeight = window.innerHeight,
-    cmWidth = contextMenu.offsetWidth,
-    cmHeight = contextMenu.offsetHeight;
+        winWidth = window.innerWidth,
+        winHeight = window.innerHeight,
+        cmWidth = contextMenu.offsetWidth,
+        cmHeight = contextMenu.offsetHeight;
 
-    if(x > (winWidth - cmWidth - shareMenu.offsetWidth)) {
+    if (x > (winWidth - cmWidth - shareMenu.offsetWidth)) {
         shareMenu.style.left = "-200px";
     } else {
         shareMenu.style.left = "";
@@ -18,7 +18,7 @@ window.addEventListener("contextmenu", e => {
 
     x = x > winWidth - cmWidth ? winWidth - cmWidth - 5 : x;
     y = y > winHeight - cmHeight ? winHeight - cmHeight - 5 : y;
-    
+
     contextMenu.style.left = `${x}px`;
     contextMenu.style.top = `${y}px`;
     contextMenu.style.visibility = "visible";

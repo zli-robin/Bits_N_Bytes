@@ -1,4 +1,3 @@
-
 let startBtn = document.getElementById('start-btn');
 let stopBtn = document.getElementById('stop-btn');
 let resetBtn = document.getElementById('reset-btn');
@@ -12,27 +11,27 @@ stopBtn.addEventListener('click', stopTimer);
 resetBtn.addEventListener('click', resetTimer);
 
 function startTimer() {
-  interval = setInterval(updateTimer, 1000);
+    interval = setInterval(updateTimer, 1000);
 }
 
 function stopTimer() {
-  clearInterval(interval);
+    clearInterval(interval);
 }
 
 function resetTimer() {
-  totalSeconds = 0;
-  updateTimerValue();
+    totalSeconds = 0;
+    updateTimerValue();
 }
 
 function updateTimer() {
-  totalSeconds++;
-  updateTimerValue();
+    totalSeconds++;
+    updateTimerValue();
 }
 
 function updateTimerValue() {
-  let hours = Math.floor(totalSeconds / 3600);
-  let minutes = Math.floor((totalSeconds - (hours * 3600)) / 60);
-  let seconds = totalSeconds - (hours * 3600) - (minutes * 60);
+    let hours = Math.floor(totalSeconds / 3600);
+    let minutes = Math.floor((totalSeconds - (hours * 3600)) / 60);
+    let seconds = totalSeconds - (hours * 3600) - (minutes * 60);
 
-  timerValue.innerText = hours + ':' + minutes + ':' + seconds;
+    timerValue.innerText = hours + ':' + minutes + ':' + seconds;
 }

@@ -2,7 +2,7 @@ body {
   font-family: Helvetica, sans-serif;
   line-height: 2em;
   margin: 0;
-  background-image: url("../images/bar.gif");
+  background-image: url("../images/Icons/explain/bar.gif"); 
   background-size: cover;
   background-repeat: no-repeat;
   overflow-y: scroll;

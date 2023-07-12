@@ -1,11 +1,11 @@
 const taskInput = document.querySelector(".task-input input"),
-    filters = document.querySelectorAll(".filters span"),
-    clearAll = document.querySelector(".clear-btn"),
-    taskBox = document.querySelector(".task-box");
+filters = document.querySelectorAll(".filters span"),
+clearAll = document.querySelector(".clear-btn"),
+taskBox = document.querySelector(".task-box");
 
 let editId,
-    isEditTask = false,
-    todos = JSON.parse(localStorage.getItem("todo-list"));
+isEditTask = false,
+todos = JSON.parse(localStorage.getItem("todo-list"));
 
 filters.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -17,10 +17,10 @@ filters.forEach(btn => {
 
 function showTodo(filter) {
     let liTag = "";
-    if (todos) {
+    if(todos) {
         todos.forEach((todo, id) => {
             let completed = todo.status == "completed" ? "checked" : "";
-            if (filter == todo.status || filter == "all") {
+            if(filter == todo.status || filter == "all") {
                 liTag += `<li class="task">
                             <label for="${id}">
                                 <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${completed}>
@@ -42,14 +42,13 @@ function showTodo(filter) {
     !checkTask.length ? clearAll.classList.remove("active") : clearAll.classList.add("active");
     taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
 }
-
 showTodo("all");
 
 function showMenu(selectedTask) {
     let menuDiv = selectedTask.parentElement.lastElementChild;
     menuDiv.classList.add("show");
     document.addEventListener("click", e => {
-        if (e.target.tagName != "I" || e.target != selectedTask) {
+        if(e.target.tagName != "I" || e.target != selectedTask) {
             menuDiv.classList.remove("show");
         }
     });
@@ -57,7 +56,7 @@ function showMenu(selectedTask) {
 
 function updateStatus(selectedTask) {
     let taskName = selectedTask.parentElement.lastElementChild;
-    if (selectedTask.checked) {
+    if(selectedTask.checked) {
         taskName.classList.add("checked");
         todos[selectedTask.id].status = "completed";
     } else {
@@ -91,8 +90,8 @@ clearAll.addEventListener("click", () => {
 
 taskInput.addEventListener("keyup", e => {
     let userTask = taskInput.value.trim();
-    if (e.key == "Enter" && userTask) {
-        if (!isEditTask) {
+    if(e.key == "Enter" && userTask) {
+        if(!isEditTask) {
             todos = !todos ? [] : todos;
             let taskInfo = {name: userTask, status: "pending"};
             todos.push(taskInfo);

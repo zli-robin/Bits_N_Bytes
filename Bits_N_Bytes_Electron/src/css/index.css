@@ -48,6 +48,7 @@
     /* /Background */
 
     /* CSS */
+    /* Widgets start*/
     .widget {
       margin: 10px;
       padding: 10px;
@@ -61,203 +62,7 @@
       width: 500%;
       height: 500%;
     }
-    #widget1 {
-      position: absolute;
-      top: 3%;
-      left: 7.4%;
-      width:fit-content;
-      height: fit-content;
-      background-color: rgba(255, 255, 255, 0.767);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-    #widget2 {
-      position: absolute;
-      top: 0%;
-      left: 8.6%;
-      width: auto;
-      height: auto;
-      background-color: rgba(109, 109, 109, 0.331);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-    #widget3 {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(109, 109, 109, 0.331);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-    #widget4 {
-      position: fixed;
-      top: 0%;
-      left: 79%;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(109, 109, 109, 0.331);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-
-    #widget5 {
-      position: fixed;
-      top: 30%;
-      left: 0%;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(109, 109, 109, 0.331);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 9;
-      transition: all 0.3s ease;
-    }
-
-    #widget6 {
-      position: fixed;
-      top: 0%;
-      left: 30%;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(109, 109, 109, 0.589);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-
-    #widget7 {
-      display: none;
-      position: fixed;
-      top: 0%;
-      left: 76.8%;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(109, 109, 109, 0.589);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 9;
-      transition: all 0.3s ease;
-    }
-
-    #widget8 {
-      display: none;
-      position: absolute;
-      top: 3%;
-      left: 0%;
-      width: 360px;
-      height: fit-content;
-      background-color: rgba(109, 109, 109, 0.331);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-
-    #widget9 {
-      position: absolute;
-      top: 0%;
-      left: 11.6%;
-      width: auto;
-      height: auto;
-      background-color: rgba(109, 109, 109, 0.331);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-    #widget10 {
-      display: none;
-      position: absolute;
-      top: 5%;
-      left: 7%;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(188, 188, 188, 0.708);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-    #widget11 {
-      display: none;
-      position: absolute;
-      top: 7%;
-      left: 6.5%;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(109, 109, 109, 0.331);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-    #widget12 {
-      display: block;
-      position: absolute;
-      top: 6%;
-      left: 11%;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(109, 109, 109, 0.331);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-    #widget13 {
-      display: none;
-      position: absolute;
-      top: 1%;
-      left: 1%;
-      width: fit-content;
-      height: fit-content;
-      max-height: 500px;
-      background-color: rgba(255, 255, 255, 0.607);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-
-    #widget14 {
-      display: none;
-      position: absolute;
-      top: 6%;
-      left: 11%;
-      width: fit-content;
-      height: fit-content;
-      background-color: rgba(255, 255, 255, 0.607);
-      border: 1px solid #000;
-      visibility: visible;
-      opacity: 1;
-      z-index: 1;
-      transition: all 0.3s ease;
-    }
-
+    
     .hidden {
       visibility: hidden;
       opacity: 0;
@@ -268,8 +73,6 @@
       width: 30%;
       height: 30%;
   }
-
-    /* Widgets start*/
 
     #widget1 {
       position: absolute;
@@ -496,7 +299,22 @@
           opacity: 1;
           z-index: 1;
           transition: all 0.3s ease;
-        }
+    }
+
+    #widget17 {
+      display: none;
+      position: absolute;
+      top: 6%;
+      left: 11%;
+      width: fit-content;
+      height: fit-content;
+      background-color: rgba(255, 255, 255, 0.607);
+      border: 1px solid #000;
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
 
     /* Widgets END*/
 
@@ -553,7 +371,8 @@
     #timer-value {
         font-size: 20px;
         font-weight: bold;
-        color: black;
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px #000;
         padding: 10px;
         text-align: center;
         margin: 20px;
@@ -572,6 +391,129 @@
 
     /*END Timer*/
 
+    /*START passwdgen*/
+    .passgencontainer{
+      width: 450px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .passgencontainer h2{
+      font-weight: 600;
+      font-size: 1.31rem;
+      padding: 1rem 1.75rem;
+      border-bottom: 1px solid #d4dbe5;
+    }
+    .passgenwrapper{
+      margin: 1.25rem 1.75rem;
+    }
+    .passgenwrapper .input-box{
+      position: relative;
+    }
+    .input-box input{
+      width: 100%;
+      height: 53px;
+      color: #000;
+      background: none;
+      font-size: 1.06rem;
+      font-weight: 500;
+      border-radius: 4px;
+      letter-spacing: 1.4px;
+      border: 1px solid #aaa;
+      padding: 0 2.85rem 0 1rem;
+    }
+    .input-box span{
+      position: absolute;
+      right: 13px;
+      cursor: pointer;
+      line-height: 53px;
+      color: #707070;
+    }
+    .input-box span:hover{
+      color: #4285F4!important;
+    }
+    .passgenwrapper .pass-indicator{
+      width: 100%;
+      height: 4px;
+      position: relative;
+      background: #dfdfdf;
+      margin-top: 0.75rem;
+      border-radius: 25px;
+    }
+    .pass-indicator::before{
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 50%;
+      border-radius: inherit;
+      transition: width 0.3s ease;
+    }
+    .pass-indicator#weak::before{
+      width: 20%;
+      background: #E64A4A;
+    }
+    .pass-indicator#medium::before{
+      width: 50%;
+      background: #f1c80b;
+    }
+    .pass-indicator#strong::before{
+      width: 100%;
+      background: #4285F4;
+    }
+    .passgenwrapper .pass-length{
+      margin: 1.56rem 0 1.25rem;
+    }
+    .pass-length .details{
+      display: flex;
+      justify-content: space-between;
+    }
+    .pass-length input{
+      width: 100%;
+      height: 5px;
+    }
+    .pass-settings .options{
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .pass-settings .options .option{
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      width: calc(100% / 2);
+    }
+    .options .option:first-child{
+      pointer-events: none;
+    }
+    .options .option:first-child input{
+      opacity: 0.7;
+    }
+    .options .option input{
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+    }
+    .options .option label{
+      cursor: pointer;
+      color: #4f4f4f;
+      padding-left: 0.63rem;
+    }
+    .passgenwrapper .generate-btn{
+      width: 100%;
+      color: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: #4285F4;
+      font-size: 1.06rem;
+      padding: 0.94rem 0;
+      border-radius: 5px;
+      text-transform: uppercase;
+      margin: 0.94rem 0 1.3rem;
+    }
+    /*END passwdgen*/
+
     /*START to_do*/
 
 
@@ -580,7 +522,7 @@
   background: #3C87FF;
 }
 .wrapper{
-  max-width: 405px;
+  max-width: fit-content;
   padding: 28px 0 30px;
   margin: 137px auto;
   background: #fff;

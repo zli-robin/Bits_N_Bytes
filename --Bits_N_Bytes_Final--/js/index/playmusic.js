@@ -3,10 +3,10 @@ var isPlaying = false;
 aud.pause();
 
 function playPause() {
-  if (isPlaying) {
-    aud.pause();
-  } else {
-    aud.play();
-  }
-  isPlaying = !isPlaying;
+    if (isPlaying) {
+        aud.pause();
+    } else {
+        aud.play();
+    }
+    isPlaying = !isPlaying;
 }
