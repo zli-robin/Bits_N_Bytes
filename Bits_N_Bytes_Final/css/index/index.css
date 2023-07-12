@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"); /* CSS for Tags */
+html {
+    height: auto;
+    width: auto;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+/* Style for the input and button */
+input {
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the select element */
+select {
+    margin-top: 10px;
+    width: 150px;
+    height: 100px;
+}
+
+
+.zoom {
+
+    zoom: 71%;
+
+}
+
+/* Background */
+.backgroundimg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This property ensures the image fills out the container while preserving its aspect ratio. */
+    z-index: -1; /* This property places the image behind all other content on the page. */
+}
+
+/* /Background */
+
+/* CSS */
+/* Widgets start*/
+.widget {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: all-scroll;
+}
+
+#widgetcontainer {
+    position: absolute;
+    margin: 0;
+    width: 500%;
+    height: 500%;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+}
+
+.WidgetButton {
+    width: 30%;
+    height: 30%;
+}
+
+#widget1 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.767);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget2 {
+    position: absolute;
+    top: 5%;
+    left: 8.6%;
+    width: auto;
+    height: auto;
+    background-color: rgba(109, 109, 109, 0.331);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget3 {
+    position: fixed;
+    bottom: 5%;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(109, 109, 109, 0.331);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget4 {
+    position: fixed;
+    top: 3%;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(109, 109, 109, 0.331);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget5 {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(109, 109, 109, 0.331);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+    transition: all 0.3s ease;
+}
+
+#widget6 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 30%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(109, 109, 109, 0.589);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget7 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 76.8%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(109, 109, 109, 0.589);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+    transition: all 0.3s ease;
+}
+
+#widget8 {
+    display: none;
+    position: absolute;
+    top: 3%;
+    left: 0;
+    width: 360px;
+    height: fit-content;
+    background-color: rgba(109, 109, 109, 0.331);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget9 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 11.6%;
+    width: auto;
+    height: auto;
+    background-color: rgba(109, 109, 109, 0.331);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget10 {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(188, 188, 188, 0.708);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget11 {
+    display: none;
+    position: absolute;
+    top: 7%;
+    left: 6.5%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(109, 109, 109, 0.331);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget12 {
+    display: none;
+    position: absolute;
+    top: 6%;
+    left: 11%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(109, 109, 109, 0.331);
+    border: 1px solid #000;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+#widget14, #widget13, #widget15, #widget16, #widget17 {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    cursor: all-scroll;
+    display: none;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.607);
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Widgets END*/
+
+/*START rechner*/
+
+.inputtext[type="text"] {
+    height: 60px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 1px;
+    border: 1px solid #e1e7ea;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+    background: linear-gradient(#d1dce0, #dfe6e9);
+}
+
+.rechnerbuttons {
+    width: 300px;
+    margin: 10px 25px 0 25px;
+    padding: 10px 0;
+}
+
+.inputbuttons[type="button"] {
+    width: 58px;
+    height: 55px;
+    margin: 5px;
+    font-size: 22px;
+    line-height: 55px;
+    border-radius: 3px;
+    border: 1px solid #d9d9d9;
+    background: linear-gradient(#d9d9d9, #bfbfbf);
+}
+
+.inputbuttons[type="button"]:hover {
+    transition: .5s;
+    background: linear-gradient(#bfbfbf, #d9d9d9);
+}
+
+input#clear {
+    background: #ff1a1a;
+    border: 1px solid #cc0000;
+    color: white;
+}
+
+input#equal {
+    width: 275px;
+    margin: 10px 0 10px 0;
+    font-size: 30px;
+    color: white;
+    background: #ff3d00;
+    border: 1px solid #b32a00;
+}
+
+/*Start Timer*/
+#timer-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px #000;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+}
+
+#timerbutton {
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/*END Timer*/
+
+/*START txtfile*/
+.wrapper {
+    width: 443px;
+    border-radius: 7px;
+    background: #fff;
+    padding: 30px 25px 40px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.wrapper :where(textarea, input, select, button) {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.wrapper :where(textarea, input)::placeholder {
+    color: #aaa;
+}
+
+.wrapper :where(textarea, input):focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.wrapper textarea {
+    height: 270px;
+    resize: none;
+    padding: 8px 13px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
+
+.wrapper .file-options {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.file-options .option {
+    width: calc(100% / 2 - 8px);
+}
+
+.option label {
+    font-size: 17px;
+}
+
+.option :where(input, .select-menu) {
+    height: 50px;
+    padding: 0 13px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+.option .select-menu select {
+    height: 50px;
+    background: none;
+}
+
+.wrapper .save-btn {
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.6;
+    padding: 16px 0;
+    margin-top: 20px;
+    pointer-events: none;
+    background: #17A2B8;
+}
+
+.save-btn:hover {
+    background: #148c9f;
+}
+
+textarea:valid ~ .save-btn {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 475px) {
+    .wrapper {
+        padding: 25px 18px 30px;
+    }
+
+    .wrapper :where(textarea, input, select, button, label) {
+        font-size: 16px !important;
+    }
+
+    .file-options .option {
+        width: calc(100% / 2 - 5px);
+    }
+
+    .option :where(input, .select-menu) {
+        padding: 0 10px;
+    }
+
+    .wrapper .save-btn {
+        padding: 15px 0;
+    }
+}
+
+/*END txtfile*/
+/*Start Countdown*/
+.well {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    line-height: 20px;
+    text-align: center;
+    zoom: 53%;
+}
+
+time {
+    font-size: 40px;
+    display: block;
+    margin-top: 2px;
+}
+
+.countdownbutton {
+    background: #333;
+    color: #fff;
+    line-height: 40px;
+    border-radius: 3px;
+    padding: 0 20px;
+    border: none;
+    text-transform: uppercase;
+    outline: none !important;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+.countdownselect {
+    border: 1px solid #333;
+    padding: 10px 3px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.disply-time {
+    display: inline-block;
+    font-size: 20px;
+    background: #5da7fa;
+    line-height: 40px;
+    vertical-align: sub;
+    color: #fff;
+    width: 40px;
+    border-radius: 50px;
+}
+
+.countdowninput {
+    outline: none !important;
+    border: 1px solid;
+    height: 37px;
+    padding: 0 10px;
+}
+
+.countdownform-group {
+    margin-top: -10px;
+}
+
+@media only screen and (max-width: 425px) {
+    .well {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+/*END countdown*/

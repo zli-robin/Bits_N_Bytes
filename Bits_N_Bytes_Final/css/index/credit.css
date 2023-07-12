@@ -1,0 +1,13 @@
+/*START Credit*/
+.navBarColor {
+    background: rgb(192, 72, 72) !important;
+    background: linear-gradient(90deg, rgba(192, 72, 72, 1) 0%, rgba(72, 0, 72, 1) 59%, rgba(23, 0, 23, 1) 100%) !important;
+}
+
+img.slide-good {
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*END Credit*/

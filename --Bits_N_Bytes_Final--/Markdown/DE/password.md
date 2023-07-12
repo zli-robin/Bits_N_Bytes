@@ -1,8 +1,0 @@
-## Passwort
-Wenn Sie ein sicheres Passwort generieren möchten, können Sie dies auf unserem Dashboard tun. BitsNBytes bietet eine bequeme Möglichkeit, ein Passwort zu generieren, indem Sie einfach unser Menü verwenden.
-
-### Anleitung zur Verwendung
-Durch einen `Rechtsklick` an beliebiger Stelle auf unserer Seite können Sie das Options-/Tools-Menü einblenden. Um den Passwortgenerator auszuwählen, müssen Sie im Menü folgende Schritte ausführen: Klicken Sie auf `Tools`, dann auf `Passwort`. Dadurch wird der Passwortgenerator geöffnet. Ein Widget erscheint, und Sie können die `Passwortlänge` einstellen, indem Sie den Schieberegler nach rechts für ein langes Passwort oder nach links für ein kurzes Passwort verschieben. Zusätzlich können Sie Ihre Passworteinstellungen auf die Verwendung von `Kleinbuchstaben (a-z)` oder `Großbuchstaben (A-Z)` beschränken. Sie können auch `Zahlen (0-9)`, `Symbole (!"+*)` hinzufügen und Duplikate ausschließen sowie Leerzeichen einschließen.
-
-### Anleitung zur Anpassung
-Um den Passwortgenerator anzupassen, navigieren Sie zu `--Bits_N_Bytes_Final--/Widgets/Passwortgen`. Dort finden Sie die folgenden Dateien: `passgen.css`, `passgen.html` und `passgen.js`. Wenn Sie das Aussehen des Widgets anpassen möchten, können Sie die `html`- und `css`-Dateien nach Belieben ändern/anpassen. Wenn Sie jedoch die Passwortgenerierung selbst anpassen möchten, müssen Sie die Datei `passgen.js` ändern/anpassen, da diese Datei die eigentliche Arbeit erledigt.

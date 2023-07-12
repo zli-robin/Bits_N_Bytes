@@ -1,0 +1,85 @@
+/*START right click*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.clickwrapper {
+    z-index: 10;
+    visibility: hidden;
+    position: absolute;
+    width: 300px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.clickwrapper .menu {
+    padding: 10px 12px;
+}
+
+.clickcontent .item {
+    list-style: none;
+    font-size: 22px;
+    height: 50px;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 0 5px 0 10px;
+}
+
+.clickcontent .item:hover {
+    background: #f2f2f2;
+}
+
+.clickcontent .item span {
+    margin-left: 8px;
+    font-size: 19px;
+}
+
+.clickcontent .item .close {
+    margin: auto;
+    font-size: 19px;
+}
+
+.clickcontent .setting {
+    display: flex;
+    margin-top: -5px;
+    padding: 5px 12px;
+}
+
+.clickcontent .share {
+    position: relative;
+    justify-content: space-between;
+}
+
+.share .share-menu {
+    position: absolute;
+    background: #fff;
+    width: 200px;
+    right: -200px;
+    top: -35px;
+    padding: 13px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+}
+
+.share:hover .share-menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.item img {
+    max-width: 30px;
+    height: auto;
+}
+
+/*END right click*/
