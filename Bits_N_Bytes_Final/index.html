@@ -224,7 +224,7 @@
                 <img src="img/icon/menu/group.svg" alt=""/>
                 <span>Credits</span>
             </li>
-            <li class="item" onClick="location.href=./html/explains.html">
+            <li class="item" onClick="location.href='./html/explains.html'">
                 <p style="margin: 5px">❓</p>
                 <span>How To</span>
             </li>
@@ -249,7 +249,9 @@
 
     function showHideWidget(widgetID) {
         let widget = document.getElementById(widgetID);
-        if (widget.style.display === "none") {
+        if (widgetID === 'widget7') {
+            widget.style.display = "flex";
+        } else if (widget.style.display === "none") {
             widget.style.display = "block";
         } else {
             widget.style.display = "none";
@@ -321,7 +323,7 @@
     </div>
 
     <div id="widget7" class="widget">
-        <label for="input_text" style="color: white;">INPUT</label><textarea
+        <label for="input_text" style="color: white;"></label><textarea
                 name="Text1"
                 cols="40"
                 rows="5"

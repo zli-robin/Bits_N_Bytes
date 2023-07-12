@@ -4262,9 +4262,6 @@ select.uk-form-width-xsmall {
 /*
  * Pass fill character to JS
  */
-:root {
-  --uk-leader-fill-content: .;
-}
 /* ========================================================================
    Component: Notification
  ========================================================================== */
@@ -6506,11 +6503,6 @@ ul.uk-nav-sub {
  * All strokes are animated by the same pace and doesn't end simultaneously.
  * To end simultaneously, `pathLength="1"` could be used, but it's not working in Safari yet.
  */
-.uk-animation-stroke {
-  animation-name: uk-stroke;
-  animation-duration: 2s;
-  stroke-dasharray: var(--uk-animation-stroke);
-}
 /* Direction modifier
  ========================================================================== */
 .uk-animation-reverse {
@@ -6715,9 +6707,6 @@ ul.uk-nav-sub {
  * Stroke
  */
 @keyframes uk-stroke {
-  0% {
-    stroke-dashoffset: var(--uk-animation-stroke);
-  }
   100% {
     stroke-dashoffset: 0;
   }
