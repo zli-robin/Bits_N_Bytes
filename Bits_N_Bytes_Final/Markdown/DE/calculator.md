@@ -1,17 +1,11 @@
-<main>
-    <div class="Content-Menu">
-        <section>
-            <div>
-            </div>
-            <div>
-                <h2>
-                    Anleitung zum Taschenrechner
-                </h2>
-                <p>
-                    Um den Taschenrechner sehen zu können, kann man einen irgenwo auf der Websiteoberfläche einen
-                    Rechtsklick machen und anschliessend auf "Tools" und anschliessend auf "Rechner" klicken.
-                    Auf dem Taschenrechenr kann man dannn anschliessend die gewünschten Rechnungen vornehmen und ausrechnen.
-                </p>
-            </div>
-        </section>
+# Rechner (Calculator)
 
+🇨🇭 **Deutsch** - Feel free to change the language of the Markdown by pressing your preferred button in the navbar!
+
+# Zweck
+Anleitung zum Taschenrechner
+
+# Anwenden
+Um den Taschenrechner sehen zu können, kann man irgendwo auf der Websiteoberfläche einen
+Rechtsklick machen und anschliessend auf "Tools" und anschliessend auf "Rechner" klicken.
+Auf dem Taschenrechner kann man dannn anschliessend die gewünschten Rechnungen vornehmen und ausrechnen.
