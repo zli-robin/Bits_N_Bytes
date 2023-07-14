@@ -1,18 +1,3 @@
-<header>
-    <div class="topnav">
-        <div class="dropdown-menu">
-            <nav class="aa-nav">
-                <a href="../explains.html"><img class="aa-nav-icon" src="../../img/icon/explain/LOGO-removebg-preview.png"/></a>
-                <ul class="aa-nav-items">
-                    <li><a href="../explains.html">Home</a></li>
-                    <li><a href="#" id="GER">Deutsch</a></li>
-                    <li><a href="#" id="ENG">English</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    </div>
-</header>
 <main>
     <div class="Content-Menu">
         <section>
@@ -30,38 +15,4 @@
                     Funktionen auf dem Fenser bearbeiten.
                 </p>
             </div>
-        </section>
-        <div id="MarkdownText">
-            <script>
-                document.getElementById('GER').addEventListener('click', function () {
-                    change("de"), location.reload()
-                });
-                document.getElementById('ENG').addEventListener('click', function () {
-                    change("en"), location.reload()
-                });
 
-                function change(lang) {
-                    if (lang === "de") {
-                        localStorage.setItem("lang", "german");
-                    } else {
-                        localStorage.setItem("lang", "english");
-                    }
-                }
-
-                const filename = "threatMap.md";
-
-                if (localStorage.getItem("lang") === "german") {
-                    console.log("checksout")
-                    document.write("<zero-md src='../../Markdown/DE/" + filename + "'>")
-                } else {
-                    console.log("meeep")
-                    document.write("<zero-md src='../../Markdown/EN/" + filename + "'>")
-                }
-            </script>
-            <template>
-                <link rel="stylesheet" href="github-markdown.css"/>
-            </template>
-            </zero-md>
-        </div>
-    </div>
-</main>
