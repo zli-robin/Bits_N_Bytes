@@ -1,10 +1,7 @@
-    </div>
-</header>
 <main>
     <div class="Content-Menu">
         <section>
             <div>
-                <img src="../../img/icon/explain/draganddrop-removebg-preview.png">
             </div>
             <div>
                 <h2>
