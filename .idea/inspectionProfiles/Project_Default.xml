@@ -3,6 +3,20 @@
     <option name="myName" value="Project Default" />
     <inspection_tool class="CssUnknownTarget" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="HtmlDeprecatedAttribute" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="5">
+            <item index="0" class="java.lang.String" itemvalue="uk-slideshow" />
+            <item index="1" class="java.lang.String" itemvalue="uk-height-viewport" />
+            <item index="2" class="java.lang.String" itemvalue="uk-slideshow-item" />
+            <item index="3" class="java.lang.String" itemvalue="uk-slidenav-previous" />
+            <item index="4" class="java.lang.String" itemvalue="uk-slidenav-next" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>

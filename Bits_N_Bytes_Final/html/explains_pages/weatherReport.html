@@ -33,7 +33,7 @@
     <div class="Content-Menu">
         <section>
             <div>
-                <img src="../../img/icon/explain/draganddrop-removebg-preview.png">
+                <img src="../../img/icon/menu/weather.svg">
             </div>
             <div>
                 <h2>
@@ -43,7 +43,7 @@
                     Feel free to change the language of the Markdown by pressing you preferred button!
                 </p>
                 <p>
-                    Eine Vorlage soll das aufsetzen neuer sachen erleichtern. !!! And dieser eine einleitung!!!
+                    Eine Vorlage soll das Aufsetzen neuer sachen erleichtern. !!! And dieser eine einleitung!!!
                 </p>
             </div>
         </section>
@@ -64,7 +64,7 @@
                     }
                 }
 
-                const filename = "Test Markdown.md";
+                const filename = "weatherReport.md";
 
                 if (localStorage.getItem("lang") === "german") {
                     console.log("checksout")
@@ -74,8 +74,9 @@
                     document.write("<zero-md src='../../Markdown/EN/" + filename + "'>")
                 }
             </script>
+            <zero-md>
             <template>
-                <link rel="stylesheet" href="github-markdown.css"/>
+                <link rel="stylesheet"/>
             </template>
             </zero-md>
         </div>
