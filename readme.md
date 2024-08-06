@@ -49,7 +49,7 @@ Das war es schon! Sie sollten nun in der Lage sein, Ihr Dashboard nach Ihren Wü
 
 1. Öffnen Sie die Kommandozeile auf Ihrem Computer.
 2. Navigieren Sie zu dem Ordner, in dem Sie das Repository speichern möchten.
-3. Geben Sie den folgenden Befehl ein: `git clone <[https://github.com/BlueNIght0696YT/Bits_N_Bytes.git](https://github.com/BlueNIght0696YT/Bits_N_Bytes.git)>`
+3. Geben Sie den folgenden Befehl ein: `git clone <[https://github.com/rsn-dev/Bits_N_Bytes.git](https://github.com/rsn-dev/Bits_N_Bytes.git)>`
 4. Drücken Sie die Eingabetaste, um den Befehl auszuführen. Das Repository wird nun auf Ihren Computer heruntergeladen.
 
 ## Datei Übertragung (Optional)
@@ -156,7 +156,7 @@ That's it! You should now be able to customize and design your dashboard to your
 - *Using GitHub (**Git-Bash must be installed!).
 1. open the command line on your computer.
 2. navigate to the folder where you want to save the repository.
-3. type the following command: `git clone <[https://github.com/BlueNIght0696YT/Bits_N_Bytes.git](https://github.com/BlueNIght0696YT/Bits_N_Bytes.git)>`
+3. type the following command: `git clone <[https://github.com/rsn-dev/Bits_N_Bytes.git](https://github.com/rsn-dev/Bits_N_Bytes.git)>`
 4. press the Enter key to execute the command. The repository is now downloaded to your computer.
 
 ## File Transfer (Optional)
